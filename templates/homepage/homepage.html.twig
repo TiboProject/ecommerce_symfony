@@ -1,20 +1,108 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomepageController!{% endblock %}
+{% block title %}Homepage{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/wamp64/www/ecommerce_symfony/src/Controller/HomepageController.php'|file_link(0) }}">src/Controller/HomepageController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/wamp64/www/ecommerce_symfony/templates/homepage/index.html.twig'|file_link(0) }}">templates/homepage/index.html.twig</a></code></li>
-    </ul>
-</div>
+    <section style="padding-top: 78px;">
+        <div data-bss-parallax-bg="true" style="height: 600px;background: url(&quot;{{asset('img/josh-hild-igLQW_yY9oo-unsplash.jpg')}}&quot;) center / cover;">
+            <div class="container h-100">
+                <div class="row h-100">
+                    <div class="col-md-6 text-center text-md-start d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-center">
+                        <div style="max-width: 350px;text-align: center;margin-right: 70px;">
+                            <h1 class="text-uppercase fw-bold" style="color: rgb(255,255,255);margin-bottom: 30px;text-align: center;">Imposez votre style</h1><a class="btn btn-primary btn-lg me-2" role="button" href="#">Acheter</a><a class="btn btn-outline-primary btn-lg" role="button" href="#">Enfant</a>
+                        </div>
+                    </div>
+                    <div class="col"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-4 py-xl-5" style="padding-left: 0px;padding-top: 0px;">
+        <div class="container">
+            <div class="border rounded border-0 d-flex flex-column justify-content-center align-items-center p-4 py-5" style="background: linear-gradient(rgba(0,123,255,0.2), rgba(0,123,255,0.2)), url(&quot;{{asset('img/cory-bjork-1iy0oJIWtnM-unsplash.jpg')}}&quot;) center / cover;height: 500px;">
+                <div class="row">
+                    <div class="col-md-10 col-xl-8 text-center d-flex d-sm-flex d-md-flex justify-content-center align-items-center mx-auto justify-content-md-start align-items-md-center justify-content-xl-center">
+                        <div>
+                            <h1 class="text-uppercase fw-bold mb-3" style="color: rgb(255,255,255);">Un style pour briller <br>tout l'été</h1>
+                            <p class="mb-4" style="color: rgb(255,255,255);">Etiam a rutrum, mauris lectus aptent convallis. Fusce vulputate aliquam, sagittis odio metus. Nulla porttitor vivamus viverra laoreet, aliquam netus.</p><button class="btn btn-primary fs-5 me-2 py-2 px-4" type="button">Découvrir</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-4 py-xl-5" style="padding-top: 0px;margin-top: 40px;">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-md-8 col-xl-6 text-center mx-auto">
+                    <h2>Nos catégories d'articles</h2>
+                    <p>Parcourez nos différentes catégories d'articles, alors <br>plutôt maillots ou crampons ?</p>
+                </div>
+            </div>
+            <div class="row gx-2 gy-2 row-cols-1 row-cols-md-2 row-cols-xl-3" data-bss-baguettebox="">
+                <div class="col"><a href="#"><img class="img-fluid" src="{{asset('img/gustavo-ferreira-mGMWpkCdTuU-unsplash.jpg')}}"></a></div>
+                <div class="col"><a href="#"><img class="img-fluid" src="{{asset('img/alex-NXejdIPTYAo-unsplash.jpg')}}"></a></div>
+                <div class="col"><a href="#"><img class="img-fluid" src="{{asset('img/moosa-moseneke-WOP-W1Yg6cg-unsplash.jpg')}}"></a></div>
+                <div class="col"><a href="#"><img class="img-fluid" src="{{asset('img/janosch-diggelmann-vKk7thmr9Mc-unsplash.jpg')}}"></a></div>
+                <div class="col"><a href="#"><img class="img-fluid" src="{{asset('img/andy-hall-EZnI8kiqUiQ-unsplash.jpg')}}"></a></div>
+                <div class="col"><a href="#"><img class="img-fluid" src="{{asset('img/intenza-fitness-UIkrBJ6zCbI-unsplash(1)(1).jpg')}}"></a></div>
+            </div>
+        </div>
+    </section>
+    <section style="padding-bottom: 0px;margin-bottom: 0px;">
+        <div class="container d-flex flex-column align-items-center py-4 py-xl-5">
+            <div class="row mb-5">
+                <div class="col-md-8 col-xl-6 text-center mx-auto">
+                    <h2>Possédez le maillot de votre équipe de rêve</h2>
+                    <p>Real Madrid, Paris Saint Germain, Liverpool, Barcelone, Olympique Lyonnais, Chelsea, Bayern Munich, Naples, ... Tous les maillots des plus grands clubs sont sur Brand !</p>
+                </div>
+            </div>
+            <div class="row gy-4 w-100" style="max-width: 800px;">
+                <div class="col-12">
+                    <div class="card"><img class="card-img w-100 d-block" src="{{asset('img/simon-reza-Yfv7JszxYyw-unsplash.jpg')}}">
+                        <div class="card-img-overlay text-center d-flex flex-column justify-content-center align-items-center p-4"></div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="card"><img class="card-img w-100 d-block" src="{{asset('img/H2YK7NJDCJAEPFOGAXHUFVIUUE.jpg')}}">
+                        <div class="card-img-overlay text-center d-flex flex-column justify-content-center align-items-center p-4"></div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="card"><img class="card-img w-100 d-block" src="{{asset('img/Icon_CAS_6401-scaled.jpg')}}">
+                        <div class="card-img-overlay text-center d-flex flex-column justify-content-center align-items-center p-4"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section style="padding-top: 0px;">
+        <div class="container d-flex flex-column align-items-center py-4 py-xl-5">
+            <div class="row gy-4 row-cols-1 row-cols-md-2 w-100" style="max-width: 800px;">
+                <div class="col order-md-first">
+                    <div class="card"><img class="card-img w-100 d-block" src="{{asset('img/thomas-park-hk2oPKuCqP0-unsplash.jpg')}}">
+                        <div class="card-img-overlay text-center d-flex flex-column justify-content-center align-items-center p-4">
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col d-md-flex order-first justify-content-md-start align-items-md-end order-md-1">
+                    <div style="width: 80%;">
+                        <h2>Des goodies en tout genre</h2>
+                        <p>Une sélection de goodies parmi lesquels des tasses de thé, des portes clés, des casquettes et autres produits du quotidien !</p>
+                    </div>
+                </div>
+                <div class="col order-md-2">
+                    <div class="card"><img class="card-img w-100 d-block" src="{{asset('img/altumcode-RrFvYtCwO8E-unsplash.jpg')}}">
+                        <div class="card-img-overlay text-center d-flex flex-column justify-content-center align-items-center p-4"></div>
+                    </div>
+                </div>
+                <div class="col order-md-2">
+                    <div class="card"><img class="card-img w-100 d-block" src="{{asset('img/nelson-ndongala-wSIvOYqNlrw-unsplash.jpg')}}">
+                        <div class="card-img-overlay text-center d-flex flex-column justify-content-center align-items-center p-4"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 {% endblock %}
