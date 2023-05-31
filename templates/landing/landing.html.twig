@@ -1,0 +1,350 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Landing page{% endblock %}
+
+{% block body %}
+    <header data-aos="slide-up" data-aos-duration="500" data-aos-once="true" class="masthead" style="background: url(&quot;{{asset('img/lcs-_vgt-KHKAOfwshGw-unsplash.jpg')}}&quot;) center / cover;">
+        <div class="container" data-aos="fade-left" data-aos-delay="1050">
+            <div class="intro-text">
+                <div class="intro-lead-in"><span>Bienvenue sur Brand</span></div>
+                <div class="intro-heading text-uppercase"><span>Votre style, notre passion !</span></div><a class="btn btn-primary btn-xl text-uppercase" role="button" href="#services">explorer</a>
+            </div>
+        </div>
+    </header>
+    <section id="services">
+        <div class="container py-4 py-xl-5">
+            <div class="row mb-5" data-aos="fade-up" data-aos-duration="600">
+                <div class="col-md-8 col-xl-6 text-center mx-auto">
+                    <h2><strong>NOS SERVICES</strong></h2>
+                    <p><span style="color: rgb(134, 142, 150);">Des services sur mesure pour répondre à toutes vos attentes !</span></p>
+                </div>
+            </div>
+            <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3" data-aos="fade-down" data-aos-duration="850" data-aos-delay="700">
+                <div class="col">
+                    <div class="text-center d-flex flex-column align-items-center align-items-xl-center">
+                        <div class="bs-icon-lg bs-icon-rounded bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block mb-3 bs-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-cart4">
+                                <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                            </svg></div>
+                        <div class="px-3">
+                            <h4><strong>E-Commerce</strong></h4>
+                            <p><span style="color: rgb(134, 142, 150);">Un large choix de maillots, d'accessoires et autres goodies vous attendent sur notre boutique, alors n'attendez plus et foncez !</span></p><a href="#">En savoir plus&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right">
+                                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
+                                </svg></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="text-center d-flex flex-column align-items-center align-items-xl-center">
+                        <div class="bs-icon-lg bs-icon-rounded bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block mb-3 bs-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -32 576 576" width="1em" height="1em" fill="currentColor">
+                                <path d="M512 64C547.3 64 576 92.65 576 128V384C576 419.3 547.3 448 512 448H64C28.65 448 0 419.3 0 384V128C0 92.65 28.65 64 64 64H512zM128 384C128 348.7 99.35 320 64 320V384H128zM64 192C99.35 192 128 163.3 128 128H64V192zM512 384V320C476.7 320 448 348.7 448 384H512zM512 128H448C448 163.3 476.7 192 512 192V128zM288 352C341 352 384 309 384 256C384 202.1 341 160 288 160C234.1 160 192 202.1 192 256C192 309 234.1 352 288 352z"></path>
+                            </svg></div>
+                        <div class="px-3">
+                            <h4><strong>Paiement sécurisé</strong></h4>
+                            <p><span style="color: rgb(134, 142, 150);">Votre sécurité avant tout : des paiements en toute tranquillité. Nous</span><br><span style="color: rgb(134, 142, 150);">utilisons des méthodes de paiement sécurisées pour garantir la</span><br><span style="color: rgb(134, 142, 150);">confidentialité de vos informations. Faites vos achats en toute sérénité !</span></p><a href="#">En savoir plus&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right">
+                                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
+                                </svg></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="text-center d-flex flex-column align-items-center align-items-xl-center">
+                        <div class="bs-icon-lg bs-icon-rounded bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block mb-3 bs-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-gift-fill">
+                                <path d="M3 2.5a2.5 2.5 0 0 1 5 0 2.5 2.5 0 0 1 5 0v.006c0 .07 0 .27-.038.494H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h2.038A2.968 2.968 0 0 1 3 2.506V2.5zm1.068.5H7v-.5a1.5 1.5 0 1 0-3 0c0 .085.002.274.045.43a.522.522 0 0 0 .023.07zM9 3h2.932a.56.56 0 0 0 .023-.07c.043-.156.045-.345.045-.43a1.5 1.5 0 0 0-3 0V3zm6 4v7.5a1.5 1.5 0 0 1-1.5 1.5H9V7h6zM2.5 16A1.5 1.5 0 0 1 1 14.5V7h6v9H2.5z"></path>
+                            </svg></div>
+                        <div class="px-3">
+                            <h4><strong>Récompenses</strong></h4>
+                            <p>Gagnez des récompenses en faisant vos achats ! Profitez de notre <br>programme de fidélité exclusif qui vous offre des avantages uniques, des<br> remises spéciales et des cadeaux surprises. Chaque achat vous rapproche<br> de nouvelles récompenses. Rejoignez-nous et soyez récompensé pour votre<br> passion !</p><a href="#">En savoir plus&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right">
+                                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
+                                </svg></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section data-aos="slide-left" data-aos-duration="500" style="padding-top: 0px;">
+        <div class="carousel slide" data-bs-ride="carousel" id="carousel-1" style="height: 600px;">
+            <div class="carousel-inner h-100">
+                <div class="carousel-item active h-100"><img class="w-100 d-block position-absolute h-100 fit-cover" src="{{asset('img/cristian-castillo-s1rIwjxsjFQ-unsplash.jpg')}}" alt="Slide Image" style="z-index: -1;">
+                    <div class="container d-flex flex-column justify-content-center h-100">
+                        <div class="row">
+                            <div class="col-md-6 col-xl-4 offset-md-2">
+                                <div style="max-width: 350px;">
+                                    <h1 class="text-uppercase fw-bold" style="color: rgb(255,255,255);">procurez vous le maillot de votre équipe favorite</h1>
+                                    <p class="my-3" style="font-size: 17px;color: rgb(255,255,255);">Premier League, Liga, Manchester City, PSG, Benfica... Toutes vos équipes préférées sont sur Brand, faites un tour dans la boutique pour acquérir le maillot de vos rêves !</p><a class="btn btn-primary btn-lg me-2" role="button" href="#" style="background: rgb(254, 209, 54);">Découvrir</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item h-100"><img class="w-100 d-block position-absolute h-100 fit-cover" src="{{asset('img/nelson-ndongala-cDUEytUiwoE-unsplash.jpg')}}" alt="Slide Image" style="z-index: -1;">
+                    <div class="container d-flex flex-column justify-content-center h-100">
+                        <div class="row">
+                            <div class="col-md-6 col-xl-4 offset-md-2">
+                                <div style="max-width: 350px;">
+                                    <h1 class="text-uppercase fw-bold" style="color: rgb(255,255,255);">les accessoires lifestyles à petits prix</h1>
+                                    <p class="my-3" style="color: rgb(255,255,255);">Découvrez les accessoires portant sur l'équipe que vous supportez toute l'année ! Casquettes, tasses de thé, portes clés.. Trouvez votre bonheur en parcourant nos coups de cœur.&nbsp;</p><a class="btn btn-primary btn-lg me-2" role="button" href="#">Découvrir</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item h-100"><img class="w-100 d-block position-absolute h-100 fit-cover" src="{{asset('img/football-stadium-3404535.jpg')}}" alt="Slide Image" style="z-index: -1;">
+                    <div class="container d-flex flex-column justify-content-center h-100">
+                        <div class="row">
+                            <div class="col-md-6 col-xl-4 offset-md-2">
+                                <div style="max-width: 350px;">
+                                    <h1 class="text-uppercase fw-bold" style="color: rgb(255,255,255);">Et bien plus encore !</h1>
+                                    <p class="my-3" style="color: rgb(255,255,255);">Parcourez la boutique pour chercher votre bonheur, trouver l'objet de vos rêves ou peut être un deuxième amour...&nbsp;</p><a class="btn btn-primary btn-lg me-2" role="button" href="#">En savoir plus</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div><a class="carousel-control-prev" href="#carousel-1" role="button" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span><span class="visually-hidden">Previous</span></a><a class="carousel-control-next" href="#carousel-1" role="button" data-bs-slide="next"><span class="carousel-control-next-icon"></span><span class="visually-hidden">Next</span></a></div>
+            <ol class="carousel-indicators">
+                <li data-bs-target="#carousel-1" data-bs-slide-to="0" class="active"></li>
+                <li data-bs-target="#carousel-1" data-bs-slide-to="1"></li>
+                <li data-bs-target="#carousel-1" data-bs-slide-to="2"></li>
+            </ol>
+        </div>
+    </section>
+    <section class="bg-light" id="portfolio">
+        <div class="container">
+            <div class="row" data-aos="zoom-out-down" data-aos-duration="350">
+                <div class="col-lg-12 text-center">
+                    <h2 class="text-uppercase section-heading">trouvez votre bonheur...</h2>
+                    <h3 class="text-muted section-subheading">Un florilèges d'articles pour vous donner l'eau à la bouche, <br>parcourez les et si l'envie vous prend explorez notre boutique</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-md-4 portfolio-item" data-aos="fade-down" data-aos-duration="450" data-aos-delay="400"><a class="portfolio-link" href="#portfolioModal1" data-bs-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content"><i class="fa fa-plus fa-3x"></i></div>
+                        </div><img class="img-fluid" src="{{asset('img/nelson-ndongala-YjwwmnQ2Rfs-unsplash.jpg')}}">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Maillots</h4>
+                        <p class="text-muted">Maillots de votre équipe préférée</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 portfolio-item" data-aos="fade-up" data-aos-duration="450" data-aos-delay="850"><a class="portfolio-link" href="#portfolioModal2" data-bs-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content"><i class="fa fa-plus fa-3x"></i></div>
+                        </div><img class="img-fluid" src="{{asset('img/braden-hopkins-sC-AbZG-Sec-unsplash.jpg')}}">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Crampons</h4>
+                        <p class="text-muted">Pour dribbler comme Neymar !</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 portfolio-item" data-aos="fade-left" data-aos-duration="450" data-aos-delay="1250"><a class="portfolio-link" href="#portfolioModal3" data-bs-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content"><i class="fa fa-plus fa-3x"></i></div>
+                        </div><img class="img-fluid" src="{{asset('img/ben-weber-r-krWscXjvQ-unsplash.jpg')}}">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Ensemble</h4>
+                        <p class="text-muted">Pourquoi n'avoir que le maillot ?</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 portfolio-item" data-aos="fade-up" data-aos-duration="450"><a class="portfolio-link" href="#portfolioModal4" data-bs-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content"><i class="fa fa-plus fa-3x"></i></div>
+                        </div><img class="img-fluid" src="{{asset('img/faizan-ali-bgBdGYkYWy4-unsplash.jpg')}}">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Ballons de foot</h4>
+                        <p class="text-muted">Envie de rejouer France - Brésil ?</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 portfolio-item" data-aos="fade-down" data-aos-duration="450" data-aos-delay="450"><a class="portfolio-link" href="#portfolioModal5" data-bs-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content"><i class="fa fa-plus fa-3x"></i></div>
+                        </div><img class="img-fluid" src="{{asset('img/dave-goudreau-3DVaJkZIZc8-unsplash.jpg')}}">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Gants de gardien</h4>
+                        <p class="text-muted">Joue la comme Courtois</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 portfolio-item" data-aos="fade-left" data-aos-duration="450" data-aos-delay="1250"><a class="portfolio-link" href="#portfolioModal6" data-bs-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content"><i class="fa fa-plus fa-3x"></i></div>
+                        </div><img class="img-fluid" src="{{asset('img/intenza-fitness-UIkrBJ6zCbI-unsplash.jpg')}}">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Goodies</h4>
+                        <p class="text-muted">Des goodies en tout genre !</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section data-aos="fade-up" data-aos-duration="400" data-aos-once="true" class="font-dark">
+        <div class="container">
+            <h3 data-aos="fade-up" data-aos-duration="400" data-aos-delay="200" class="text-center all-capital p-4" style="font-size: 30px;font-weight: 300;line-height: 38px;letter-spacing: 2px;">statistique de brand</h3>
+            <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-4 row-cols-xl-4 row-cols-xxl-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="150" style="padding-top: 20px;padding-bottom: 40px;">
+                <div class="col">
+                    <div><span class="Justify-Flex-Center purecounter counter-font count plus" data-purecounter-start="0" data-purecounter-end="60" data-purecounter-duration="2" style="color: #fed136;">60</span>
+                        <p class="text-center text-uppercase">articles disponibles</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div><span class="Justify-Flex-Center purecounter counter-font plus" data-purecounter-start="0" data-purecounter-end="250" data-purecounter-duration="5" style="color: #fed136;">100</span>
+                        <p class="text-center text-uppercase">comptes créés</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div><span class="Justify-Flex-Center purecounter counter-font plus-k" data-purecounter-start="0" data-purecounter-end="300" data-purecounter-duration="2" style="color: #fed136;">1</span>
+                        <p class="text-center text-uppercase">Visites quotidiennes</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div><span class="Justify-Flex-Center purecounter counter-font plus" data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="6" style="color: #fed136;">5</span>
+                        <p class="text-center text-uppercase">catégories d'articles</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="text-uppercase">à propos de nous</h2>
+                    <h3 class="text-muted section-subheading">Notre histoire, votre style</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="list-group timeline">
+                        <li class="list-group-item">
+                            <div class="timeline-image"><img class="rounded-circle img-fluid" src="{{asset('img/about/1.jpg')}}"></div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>22-05-2023</h4>
+                                    <h4 class="subheading">Premier commit</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item timeline-inverted">
+                            <div class="timeline-image"><img class="rounded-circle img-fluid" src="{{asset('img/about/2.jpg')}}"></div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>To do</h4>
+                                    <h4 class="subheading">To do</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="timeline-image"><img class="rounded-circle img-fluid" src="{{asset('img/about/3.jpg')}}"></div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>To do</h4>
+                                    <h4 class="subheading">To do</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item timeline-inverted">
+                            <div class="timeline-image"><img class="rounded-circle img-fluid" src="{{asset('img/about/4.jpg')}}"></div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>To do</h4>
+                                    <h4 class="subheading">To do</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item timeline-inverted">
+                            <div class="timeline-image">
+                                <h4 style="transform: scale(1.12);">Vous accompagner est notre <br>métier</h4>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-light" id="team">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="team-member"><img class="rounded-circle mx-auto" src="{{asset('img/team/1.jpg')}}">
+                        <h4>Utilisation d'une api</h4>
+                        <p class="text-muted">Lead Designer</p>
+                        <ul class="list-inline social-buttons">
+                            <li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li class="list-inline-item"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="team-member"><img class="rounded-circle mx-auto" src="{{asset('img/team/2.jpg')}}">
+                        <h4><strong>Utilisation d'une api</strong></h4>
+                        <p class="text-muted">Lead Marketer</p>
+                        <ul class="list-inline social-buttons">
+                            <li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li class="list-inline-item"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="team-member"><img class="rounded-circle mx-auto" src="{{asset('img/team/3.jpg')}}">
+                        <h4><strong>Utilisation d'une api</strong></h4>
+                        <p class="text-muted">Lead Developer</p>
+                        <ul class="list-inline social-buttons">
+                            <li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li class="list-inline-item"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" style="background-image: url(&quot;{{asset('img/map-image.png')}}&quot;);">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="text-uppercase section-heading">Contactez nous</h2>
+                    <h3 class="text-muted section-subheading">N'hésitez pas à nous contacter via le formulaire ci dessous,<br>&nbsp;nous vous répondrons dans les plus brefs délais</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <form id="contactForm" name="contactForm">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group mb-3"><input class="form-control" type="text" id="name" placeholder="Votre nom *" required=""><small class="form-text text-danger flex-grow-1 lead"></small></div>
+                                <div class="form-group mb-3"><input class="form-control" type="email" id="email" placeholder="Votre email *" required=""><small class="form-text text-danger lead"></small></div>
+                                <div class="form-group mb-3"><input class="form-control" type="tel" placeholder="Votre téléphone *" required=""><small class="form-text text-danger lead"></small></div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group mb-3"><textarea class="form-control" id="message" placeholder="Vos commentaires" required=""></textarea><small class="form-text text-danger lead"></small></div>
+                            </div>
+                            <div class="w-100"></div>
+                            <div class="col-lg-12 text-center">
+                                <div id="success"></div><button class="btn btn-primary btn-xl text-uppercase" id="sendMessageButton" type="submit">envoyer</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

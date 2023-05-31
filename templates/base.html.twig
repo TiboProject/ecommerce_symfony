@@ -2,18 +2,52 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}{% endblock %}</title>
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
-        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
-        {% block stylesheets %}
-            {{ encore_entry_link_tags('app') }}
-        {% endblock %}
+        <link rel="stylesheet" href="{{asset('bootstrap/css/bootstrap.min.css')}}">         
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&amp;display=swap">         
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kaushan+Script&amp;display=swap">         
+        <link rel="stylesheet" href="{{asset('css/swiper-icons.css')}}">         
+        <link rel="stylesheet" href="{{asset('fonts/font-awesome.min.css')}}">         
+        <link rel="stylesheet" href="{{asset('css/aos.min.css')}}">         
+        <link rel="stylesheet" href="{{asset('css/Bootstrap-4---Product-List.css')}}">
+        <link rel="stylesheet" href="{{asset('css/3D_CSS_PROGRESS_BAR_BY_REDSTAPLER-3D_CSS_PROGRESS_BAR.css')}}">
+        <link rel="stylesheet" href="{{asset('css/3D_CSS_PROGRESS_BAR_BY_REDSTAPLER.css')}}">                 
+        <link rel="stylesheet" href="{{asset('css/Hero-Carousel-images.css')}}">         
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">         
+        <link rel="stylesheet" href="{{asset('css/Incrementing-Animation.css')}}">         
+        <link rel="stylesheet" href="{{asset('css/Lightbox-Gallery-baguetteBox.min.css')}}">         
+        <link rel="stylesheet" href="{{asset('css/Login-with-overlay-image.css')}}">         
+        <link rel="stylesheet" href="{{asset('css/Manage-Users.css')}}">         
+        <link rel="stylesheet" href="{{asset('css/MUSA_carousel-product-cart-slider-carousel-product-cart-slider.css')}}">         
+        <link rel="stylesheet" href="{{asset('css/MUSA_carousel-product-cart-slider.css')}}">         
+        <link rel="stylesheet" href="{{asset('css/Reviews.css')}}">         
+        <link rel="stylesheet" href="{{asset('css/shopping-ecommerce-products.css')}}">
+        <link rel="stylesheet" href="{{asset('css/Simple-Slider-swiper-bundle.min.css')}}">
+        <link rel="stylesheet" href="{{asset('css/Simple-Slider.css')}}">         
+        <link rel="stylesheet" href="{{asset('css/Stats-icons.css')}}">         
+        <link rel="stylesheet" href="{{asset('css/Testimonial-Slider-9-1.css')}}">
+        <link rel="stylesheet" href="{{asset('css/Swipe-Slider-7-styles.min.css')}}">         
+        <link rel="stylesheet" href="{{asset('fonts/css/Testimonial-Slider-9.css')}}">
 
-        {% block javascripts %}
-            {{ encore_entry_script_tags('app') }}
-        {% endblock %}
     </head>
     <body>
+        {% block navbar %} {% include 'fragments/navbar.html.twig' %} {% endblock %}
         {% block body %}{% endblock %}
+        {% block footer %} {% include 'fragments/footer.html.twig' %} {% endblock %}
+
+        <script src="{{asset('/bootstrap/js/bootstrap.min.js')}}"></script>
+        <script src="{{asset('js/aos.min.js')}}"></script>
+        <script src="{{asset('js/bs-init.js')}}"></script>
+        <script src="{{asset('js/agency.js')}}"></script>
+        <script src="{{asset('js/3D_CSS_PROGRESS_BAR_BY_REDSTAPLER-3D_CSS_PROGRESS_BAR.js')}}"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+        <script src="{{asset('js/Incrementing-Animation-Counter.js')}}"></script>
+        <script src="{{asset('js/Lightbox-Gallery-baguetteBox.min.js')}}"></script>
+        <script src="{{asset('js/Lightbox-Gallery.js')}}"></script>
+        <script src="{{asset('js/Simple-Slider-swiper-bundle.min.js')}}"></script>
+        <script src="{{asset('js/Simple-Slider.js')}}"></script>
+        <script src="{{asset('js/Swipe-Slider-7-script.min.js')}}"></script>
     </body>
 </html>
