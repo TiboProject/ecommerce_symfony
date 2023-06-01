@@ -6,11 +6,11 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class HomepageController extends AbstractController
+class CartController extends AbstractController
 {
-    #[Route('/homepage', name: 'app_homepage')]
+    #[Route('/cart', name: 'app_cart')]
     public function index(): Response
     {
-        return $this->render('homepage/homepage.html.twig');
+        return $this->render('cart/cart.html.twig');
     }
 }
