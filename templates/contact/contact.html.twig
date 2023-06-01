@@ -1,7 +1,36 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ContactController!{% endblock %}
+{% block title %}Contactez-nous !{% endblock %}
 
 {% block body %}
-
+    <section id="contact" style="background-image: url('{{asset('img/map-image.png')}}');">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="text-uppercase section-heading">Contactez nous</h2>
+                    <h3 class="text-muted section-subheading">N'hésitez pas à nous contacter via le formulaire ci dessous,<br>&nbsp;nous vous répondrons dans les plus brefs délais</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <form id="contactForm" name="contactForm">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group mb-3"><input class="form-control" type="text" id="name" placeholder="Votre nom *" required=""><small class="form-text text-danger flex-grow-1 lead"></small></div>
+                                <div class="form-group mb-3"><input class="form-control" type="email" id="email" placeholder="Votre email *" required=""><small class="form-text text-danger lead"></small></div>
+                                <div class="form-group mb-3"><input class="form-control" type="tel" placeholder="Votre téléphone *" required=""><small class="form-text text-danger lead"></small></div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group mb-3"><textarea class="form-control" id="message" placeholder="Vos commentaires" required=""></textarea><small class="form-text text-danger lead"></small></div>
+                            </div>
+                            <div class="w-100"></div>
+                            <div class="col-lg-12 text-center">
+                                <div id="success"></div><button class="btn btn-primary btn-xl text-uppercase" id="sendMessageButton" type="submit">envoyer</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 {% endblock %}

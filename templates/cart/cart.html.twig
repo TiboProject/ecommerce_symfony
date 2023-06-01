@@ -1,0 +1,79 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello CartController!{% endblock %}
+
+{% block body %}
+    <section>
+        <div class="shopping-cart">
+            <div class="px-4 px-lg-0">
+                <div class="pb-5">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12 p-5 bg-white rounded shadow-sm mb-5">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th class="bg-light border-0" scope="col"><div class="p-2 px-3 text-uppercase">Produit</div></th>
+                                                <th class="bg-light border-0" scope="col"><div class="py-2 text-uppercase">Prix</div></th>
+                                                <th class="bg-light border-0" scope="col"><div class="py-2 text-uppercase">Retirer</div></th>
+                                                <th class="bg-light border-0" scope="col"><div class="py-2 text-uppercase">Remove</div></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="border-0" scope="row"><div class="p-2"><img src="https://res.cloudinary.com/mhmd/image/upload/v1556670479/product-1_zrifhn.jpg" alt="" width="70" class="img-fluid rounded shadow-sm"><div class="ml-3 d-inline-block align-middle"><h5 class="mb-0"><a href="#" class="text-dark d-inline-block align-middle">Timex Unisex Originals</a></h5><span class="text-muted font-weight-normal font-italic d-block">Catégorie: Goodies</span></div></div></td>
+                                                <td class="border-0 align-middle" style="font-weight: bold;"><strong>79.00</strong>€</td>
+                                                <td class="border-0 align-middle"><strong>3</strong></td>
+                                                <td class="border-0 align-middle"><a href="#" class="text-dark"><i class="fa fa-trash"></i></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row"><div class="p-2"><img src="https://res.cloudinary.com/mhmd/image/upload/v1556670479/product-3_cexmhn.jpg" alt="" width="70" class="img-fluid rounded shadow-sm"><div class="ml-3 d-inline-block align-middle"><h5 class="mb-0"><a href="#" class="text-dark d-inline-block">Lumix camera lense</a></h5><span class="text-muted font-weight-normal font-italic">Catégorie: Goodies</span></div></div></td>
+                                                <td class="align-middle" style="font-weight: bold;"><strong>79.00</strong>€</td>
+                                                <td class="align-middle"><strong>3</strong></td>
+                                                <td class="align-middle"><a href="#" class="text-dark"><i class="fa fa-trash"></i></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row"><div class="p-2"><img src="https://res.cloudinary.com/mhmd/image/upload/v1556670479/product-2_qxjis2.jpg" alt="" width="70" class="img-fluid rounded shadow-sm"><div class="ml-3 d-inline-block align-middle"><h5 class="mb-0"><a href="#" class="text-dark d-inline-block">Gray Nike running shoe</a></h5><span class="text-muted font-weight-normal font-italic">Catégorie: Crampons</span></div></div></td>
+                                                <td class="align-middle" style="font-weight: bold;"><strong>79.00</strong>€</td>
+                                                <td class="align-middle"><strong>3</strong></td>
+                                                <td class="align-middle"><a href="#" class="text-dark"><i class="fa fa-trash"></i></a></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row py-5 p-4 bg-white rounded shadow-sm">
+                            <div class="col-lg-6">
+                                <div class="text-uppercase bg-light rounded-pill px-4 py-3 font-weight-bold"><span>code de réduction</span></div>
+                                <div class="p-4">
+                                    <p class="font-italic mb-4">Si vous avez un code de réduction, veuillez le rentrer ci-dessous.</p>
+                                    <div class="input-group mb-4 border rounded-pill p-2"><input class="border-0 form-control form-control" type="text" placeholder="Appliquer le coupon" aria-describedby="button-addon3">
+                                        <div class="border-0 input-group-text input-group-append"><button class="btn btn-dark px-4 rounded-pill" id="button-addon3" type="button"><i class="fa fa-gift mr-2"></i>Appliquer le coupon</button></div>
+                                    </div>
+                                </div>
+                                <div class="text-uppercase bg-light rounded-pill px-4 py-3 font-weight-bold"><span>instructions pour le livreur</span></div>
+                                <div class="p-4">
+                                    <p class="font-italic mb-4">Si vous avez la moindre information à fournir au livreur, veuillez le noter ci-dessous</p><textarea name="" cols="30" rows="2" class="form-control"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="text-uppercase bg-light rounded-pill px-4 py-3 font-weight-bold"><span>récapitulatif de commande</span></div>
+                                <div class="p-4">
+                                    <p class="font-italic mb-4">Les prix et les taxes sont calculés selon la réglementation en vigueur.</p>
+                                    <ul class="list-unstyled mb-4">
+                                        <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Sous total de la commande</strong><strong>$390.00</strong></li>
+                                        <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Frais de livraison</strong><strong>$10.00</strong></li>
+                                        <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">TVA</strong><strong>$0.00</strong></li>
+                                        <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Total</strong><h5 class="font-weight-bold">$400.00</h5></li>
+                                    </ul><a class="btn btn-dark rounded-pill py-2 btn-block" role="button" href="#">Confirmer et payer</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
