@@ -30,6 +30,9 @@ class Product
     #[ORM\OneToMany(mappedBy: 'product', targetEntity: OrderLine::class, orphanRemoval: true)]
     private Collection $orderLines;
 
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $picture = null;
+
     public function __construct()
     {
         $this->orderLines = new ArrayCollection();
@@ -119,6 +122,18 @@ class Product
                 $orderLine->setProduct(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getPicture(): ?string
+    {
+        return $this->picture;
+    }
+
+    public function setPicture(?string $picture): self
+    {
+        $this->picture = $picture;
 
         return $this;
     }
