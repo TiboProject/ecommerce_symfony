@@ -1,0 +1,150 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ProductController!{% endblock %}
+
+{% block body %}
+    <section style="padding-bottom: 1px;">
+        <div class="container py-4 py-xl-5">
+            <div class="row row-cols-1 row-cols-md-2">
+                <div class="col"><img class="rounded w-100 h-100 fit-cover" style="min-height: 300px;" src="{{asset('img/simon-reza-Yfv7JszxYyw-unsplash.jpg')}}"></div>
+                <div class="col d-flex flex-column justify-content-center p-4">
+                    <div class="text-center text-md-start d-flex flex-column align-items-center align-items-md-start mb-5">
+                        <div>
+                            <h4>Maillot Real Madrid Away 22/23</h4>
+                            <p style="font-style: italic;">Maillot</p><a href="#"></a>
+                        </div>
+                        <p style="font-weight: bold;font-size: 24px;">60 €</p>
+                        <div class="dropdown"><button class="btn btn-primary dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" type="button" style="margin-bottom: 20px;">Taille</button>
+                            <div class="dropdown-menu"><a class="dropdown-item" href="#">S</a><a class="dropdown-item" href="#">M</a><a class="dropdown-item" href="#">L</a></div>
+                        </div>
+                        <p>Quantité</p><input type="number" style="margin-top: 0px;padding-bottom: 0px;margin-bottom: 20px;">
+                        <p>Description du produit&nbsp;<br><strong>Lorem Ipsum</strong> is simply dummy text of the printing and <br>typesetting industry. Lorem Ipsum has been the industry's standard dummy<br> text ever since the 1500s</p><button class="btn btn-primary" type="button">Ajouter au panier</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div>
+        <div class="container" style="padding-right: 30px;padding-left: 30px;padding-top: 35px;padding-bottom: 35px;">
+            <h1 style="color: rgb(0,0,0);margin-bottom: 5px;font-size: 33px;font-weight: bold;text-align: center;">Avis</h1>
+            <p style="font-size: 18px;font-weight: bold;text-align: center;color: rgb(255,255,255);margin-bottom: 30px;">See what the hype is all about and check out our Yelp to see&nbsp;<a style="text-decoration: underline;color: white;" href="https://www.yelp.com/biz/ristorante-da-maria-san-jose-2" target="_blank">all our reviews!</a></p>
+            <div class="row">
+                <div class="col-12 col-md-6" style="margin-bottom: 15px;">
+                    <div class="yelp_review">
+                        <div class="yelp_basic">
+                            <div class="yelp_first">
+                                <h3 style="color: #212529;">Trisha W. </h3>
+                                <h4>Las Vegas, NV</h4>
+                            </div>
+                            <div class="yelp_first"><img class="yelp_star" src="{{asset('img/star-01.png')}}"><img class="yelp_star" src="{{asset('img/star-01.png')}}"><img class="yelp_star" src="{{asset('img/star-01.png')}}"><img class="yelp_star" src="{{asset('img/star-01.png')}}"><img class="yelp_star" src="{{asset('img/star-01.png')}}"></div>
+                        </div>
+                        <div class="yelp_descript">
+                            <p>We Yelped this on our way to San Francisco. 5 stars is for the food. Everything we ordered was made to order and very, very good! We had the fettuccine Alfredo, lasagna, spaghetti and meatballs, pepperoni pizza and garlic bread sticks.<br></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6" style="margin-bottom: 15px;">
+                    <div class="yelp_review">
+                        <div class="yelp_basic">
+                            <div class="yelp_first">
+                                <h3 style="color: #212529;">Amy N.</h3>
+                                <h4>San Jose, CA</h4>
+                            </div>
+                            <div class="yelp_first"><img class="yelp_star" src="{{asset('img/star-01.png')}}"><img class="yelp_star" src="{{asset('img/star-01.png')}}"><img class="yelp_star" src="{{asset('img/star-01.png')}}"><img class="yelp_star" src="{{asset('img/star-01.png')}}"><img class="yelp_star" src="{{asset('img/star-01.png')}}"></div>
+                        </div>
+                        <div class="yelp_descript">
+                            <p>Very pleasant, we went here for lunch today, party of 3. We had an order of cheesy bread which was crisp pizza crust with cheese and a some marinara for dipping, It was just the right amount of appetizer. &nbsp;<br><br></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6" style="margin-bottom: 15px;">
+                    <div class="yelp_review">
+                        <div class="yelp_basic">
+                            <div class="yelp_first">
+                                <h3 style="color: #212529;">Jean B.</h3>
+                                <h4>San Jose, CA</h4>
+                            </div>
+                            <div class="yelp_first"><img class="yelp_star" src="{{asset('img/star_empty-01.png')}}"><img class="yelp_star" src="{{asset('img/star-01.png')}}"><img class="yelp_star" src="{{asset('img/star-01.png')}}"><img class="yelp_star" src="{{asset('img/star-01.png')}}"><img class="yelp_star" src="{{asset('img/star-01.png')}}"></div>
+                        </div>
+                        <div class="yelp_descript">
+                            <p>Spouse &amp; I were hungry on the way home from a shopping excursion and decided to stop here for lunch on a whim. Glad we did! He had a chicken parm sandwich, I had a veggie calzone, and we split a mista salad. Delicious all around!<br></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6" style="margin-bottom: 15px;">
+                    <div class="yelp_review">
+                        <div class="yelp_basic">
+                            <div class="yelp_first">
+                                <h3 style="color: #212529;">Greg H.</h3>
+                                <h4>Los Gatos, CA</h4>
+                            </div>
+                            <div class="yelp_first"><img class="yelp_star" src="{{asset('img/star-01.png')}}"><img class="yelp_star" src="{{asset('img/star-01.png')}}"><img class="yelp_star" src="{{asset('img/star-01.png')}}"><img class="yelp_star" src="{{asset('img/star-01.png')}}"><img class="yelp_star" src="{{asset('img/star-01.png')}}"></div>
+                        </div>
+                        <div class="yelp_descript">
+                            <p>We had a wonderful meal with our family. Everyone enjoyed their meals. We will definitely be back.<br></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section>
+        <h1 style="text-align: center;">Complétez votre look</h1>
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <ul class="list-group shadow">
+                        <li class="list-group-item">
+                            <div class="flex-column flex-lg-row align-items-lg-center media p-3">
+                                <div class="order-2 order-lg-1 media-body">
+                                    <h5 class="mt-0 font-weight-bold mb-2">Awesome product</h5>
+                                    <p class="text-muted font-italic mb-0 small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit fuga autem maiores necessitatibus.</p>
+                                    <div class="d-flex justify-content-between align-items-center mt-1">
+                                        <h6 class="font-weight-bold my-2">120<strong>€</strong></h6>
+                                        <ul class="list-inline small"></ul>
+                                    </div>
+                                </div><img class="order-1 order-lg-2 ml-lg-5" src="https://res.cloudinary.com/mhmd/image/upload/v1556485076/shoes-1_gthops.jpg" alt="Generic placeholder image" width="200">
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="flex-column flex-lg-row align-items-lg-center media p-3">
+                                <div class="order-2 order-lg-1 media-body">
+                                    <h5 class="mt-0 font-weight-bold mb-2">Awesome product</h5>
+                                    <p class="text-muted font-italic mb-0 small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit fuga autem maiores necessitatibus.</p>
+                                    <div class="d-flex justify-content-between align-items-center mt-1">
+                                        <h6 class="font-weight-bold my-2"><strong>99€</strong></h6>
+                                        <ul class="list-inline small"></ul>
+                                    </div>
+                                </div><img class="order-1 order-lg-2 ml-lg-5" src="https://res.cloudinary.com/mhmd/image/upload/v1556485077/shoes-3_rk25rt.jpg" alt="Generic placeholder image" width="200">
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="flex-column flex-lg-row align-items-lg-center media p-3">
+                                <div class="order-2 order-lg-1 media-body">
+                                    <h5 class="mt-0 font-weight-bold mb-2">Awesome product</h5>
+                                    <p class="text-muted font-italic mb-0 small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit fuga autem maiores necessitatibus.</p>
+                                    <div class="d-flex justify-content-between align-items-center mt-1">
+                                        <h6 class="font-weight-bold my-2"><strong>250€</strong></h6>
+                                        <ul class="list-inline small"></ul>
+                                    </div>
+                                </div><img class="order-1 order-lg-2 ml-lg-5" src="https://res.cloudinary.com/mhmd/image/upload/v1556485078/shoes-2_g4qame.jpg" alt="Generic placeholder image" width="200">
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="flex-column flex-lg-row align-items-lg-center media p-3">
+                                <div class="order-2 order-lg-1 media-body">
+                                    <h5 class="mt-0 font-weight-bold mb-2">Awesome product</h5>
+                                    <p class="text-muted font-italic mb-0 small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit fuga autem maiores necessitatibus.</p>
+                                    <div class="d-flex justify-content-between align-items-center mt-1">
+                                        <h6 class="font-weight-bold my-2">$220.00</h6>
+                                        <ul class="list-inline small"></ul>
+                                    </div>
+                                </div><img class="order-1 order-lg-2 ml-lg-5" src="https://res.cloudinary.com/mhmd/image/upload/v1556485078/shoes-4_vgfjy9.jpg" alt="Generic placeholder image" width="200">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
