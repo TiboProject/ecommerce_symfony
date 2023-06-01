@@ -36,7 +36,9 @@ class AppFixtures extends Fixture
             $product= new Product();
             $product->setName($categories[$i].'-'.$equipe[$i])
                 ->setCategory($categories[$i])
-                ->setPrice("$i");
+                ->setPrice("$i")
+                ->setPicture("https://fakeimg.pl/350x200/?text=World&font=lobster")
+                ;
             $stock->setProduct($product)
                 ->setNumber(10*$i);
 
@@ -75,6 +77,7 @@ class AppFixtures extends Fixture
         $newProduct= new Product();
         $newProduct->setName('Maillot neymar')
             ->setCategory('Maillot')
+            ->setPicture("https://fakeimg.pl/350x200/?text=World&font=lobster")
             ->setPrice("99999");
         $orderLine->setProduct($newProduct);
 
