@@ -18,6 +18,11 @@
                                                     <div class="mb-5">
                                                         <h3 class="h4 font-weight-bold text-theme" style="color: #212529;">Connexion</h3>
                                                     </div>
+                                                    {% if error %}
+                                                    <div class="alert alert-danger alert-dismissible" role="alert"><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="alert"></button>
+                                                        <h4 class="alert-heading">Attention</h4><span><strong>{{error.messageKey|trans(error.messageData, 'security')}}</strong></span>
+                                                    </div>
+                                                    {% endif %}
                                                     <h6 class="h5 mb-0" style="color: #212529;">Welcome back !</h6>
                                                     <p class="text-muted mt-2 mb-5">Entrez votre mot de passe ainsi que votre adresse mail.</p>
                                                     <form action="{{path('app_security_login')}}" method="post">
