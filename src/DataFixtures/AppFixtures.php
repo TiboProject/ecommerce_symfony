@@ -12,9 +12,17 @@ use App\Entity\Location;
 use App\Entity\OrderLine;
 use Doctrine\Persistence\ObjectManager;
 use Doctrine\Bundle\FixturesBundle\Fixture;
+use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 
 class AppFixtures extends Fixture
 {
+    private UserPasswordHasherInterface $passwordHasher;
+
+    public function __construct(UserPasswordHasherInterface $passwordHasher)
+    {
+        $this->passwordHasher = $passwordHasher;
+    }
+
     public function load(ObjectManager $manager): void
     {
         $ville=array('Paris','Marseille','Lyon','Lille','Clamart');
@@ -45,11 +53,12 @@ class AppFixtures extends Fixture
             $manager->persist($product);
         }
 
+
         for ($i=1;$i<=5;$i++)
         {
             $user= new User();
             $user->setMail("Utilisateur$i@mail.com")
-                ->setPassword("UtilisateurPassword$i")
+                ->setPassword($this->passwordHasher->hashPassword($user,"UtilisateurPassword$i"))
                 ->setUsername("Utilisateur$i")
                 ->setRewardPoints($i);
 
@@ -61,7 +70,7 @@ class AppFixtures extends Fixture
 
         $newUser= new User();
         $newUser->setMail("Utilisateur54@mail.com")
-                ->setPassword("UtilisateurPassword$54")
+                ->setPassword($this->passwordHasher->hashPassword($newUser,"UtilisateurPassword$54"))
                 ->setUsername("Utilisateur54")
                 ->setRewardPoints(3612);
         $newLocation= new Location();
