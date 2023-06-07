@@ -18,6 +18,18 @@ security:
             lazy: true
             # provider that you set earlier inside providers
             provider: app_user_provider
+            form_login:
+                # "app_security_login" is the name of the route created for the login page
+                login_path: app_security_login
+                check_path: app_security_login
+                enable_csrf: true
+            logout:
+                path: app_logout
+            login_throttling: null
+            # configure the maximum login attempts
+            login_throttling:
+                max_attempts: 3          # per minute ...
+                # interval: '15 minutes' # ... or in a custom period
 
             # activate different ways to authenticate
             # https://symfony.com/doc/current/security.html#firewalls-authentication

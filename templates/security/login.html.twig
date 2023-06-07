@@ -20,9 +20,11 @@
                                                     </div>
                                                     <h6 class="h5 mb-0" style="color: #212529;">Welcome back !</h6>
                                                     <p class="text-muted mt-2 mb-5">Entrez votre mot de passe ainsi que votre adresse mail.</p>
-                                                    <form>
-                                                        <div class="form-group"><label class="form-label" for="exampleInputEmail1">Adresse mail</label><input class="form-control form-control" type="email" id="exampleInputEmail1"></div>
-                                                        <div class="form-group mb-5"><label class="form-label" for="exampleInputPassword1">Mot de passe</label><input class="form-control form-control" type="password" id="exampleInputPassword1"></div><button class="btn btn-theme" type="submit" style="background: #212529;">Se connecter</button>
+                                                    <form action="{{path('app_security_login')}}" method="post">
+                                                        <div class="form-group"><label class="form-label" for="username">Adresse mail</label><input class="form-control form-control" type="text" id="username" name="_username" value="{{ last_username }}"></div>
+                                                        <div class="form-group mb-5"><label class="form-label" for="password">Mot de passe</label><input class="form-control form-control" type="password" id="password" name="_password"></div>
+                                                        <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+                                                        <button class="btn btn-theme" type="submit" style="background: #212529;">Se connecter</button>
                                                     </form><a href="#l" class="forgot-link float-right text-primary">Mot de passe oublié ?</a>
                                                 </div>
                                             </div>
