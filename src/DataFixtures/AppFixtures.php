@@ -60,6 +60,7 @@ class AppFixtures extends Fixture
             $user->setMail("Utilisateur$i@mail.com")
                 ->setPassword($this->passwordHasher->hashPassword($user,"UtilisateurPassword$i"))
                 ->setUsername("Utilisateur$i")
+                ->setIsVerified(true)
                 ->setRewardPoints($i);
 
             $manager->persist($user);
@@ -72,6 +73,7 @@ class AppFixtures extends Fixture
         $newUser->setMail("Utilisateur54@mail.com")
                 ->setPassword($this->passwordHasher->hashPassword($newUser,"UtilisateurPassword$54"))
                 ->setUsername("Utilisateur54")
+                ->setIsVerified(true)
                 ->setRewardPoints(3612);
         $newLocation= new Location();
         $newLocation->setVille('Paris')

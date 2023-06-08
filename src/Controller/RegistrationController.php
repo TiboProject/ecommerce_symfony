@@ -12,11 +12,12 @@ use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Http\Authentication\UserAuthenticatorInterface;
 use Symfony\Contracts\Translation\TranslatorInterface;
+use SymfonyCasts\Bundle\VerifyEmail\VerifyEmailHelperInterface;
 
 class RegistrationController extends AbstractController
 {
     #[Route('/register', name: 'app_register')]
-    public function register(Request $request, UserPasswordHasherInterface $userPasswordHasher, EntityManagerInterface $entityManager): Response
+    public function register(Request $request, UserPasswordHasherInterface $userPasswordHasher, EntityManagerInterface $entityManager, VerifyEmailHelperInterface $verifyEmailHelperInterface): Response
     {
         $user = new User();
         $form = $this->createForm(RegistrationFormType::class, $user);
@@ -34,11 +35,27 @@ class RegistrationController extends AbstractController
             $entityManager->persist($user);
             $entityManager->flush();
 
+            $signatureComponents = $verifyEmailHelperInterface->generateSignature(
+                'app_verify_email',
+                $user->getId(),
+                $user->getMail(),
+                ['id' => $user->getId()]
+            );
+
+            ///A faire : envoyer un vrai mail, en V1 ce sera un message flash
+            $this->addFlash('success', 'Confirmez votre email ici : '.$signatureComponents->getSignedUrl());
+
             return $this->redirectToRoute('app_security_login');
         }
 
         return $this->render('registration/register.html.twig', [
             'registrationForm' => $form->createView(),
         ]);
+    }
+
+    #[Route('/verify/email', name: 'app_verify_email')]
+    public function verifyUserEmail() : Response
+    {
+
     }
 }
