@@ -6,7 +6,7 @@
     <header data-aos="slide-up" data-aos-duration="500" data-aos-once="true" class="masthead" style="background: url(&quot;{{asset('img/lcs-_vgt-KHKAOfwshGw-unsplash.jpg')}}&quot;) center / cover;">
         <div class="container" data-aos="fade-left" data-aos-delay="1050">
             <div class="intro-text">
-                <div class="intro-lead-in"><span>Bienvenue sur Brand</span></div>
+                <div class="intro-lead-in"><span>Bienvenue sur Brand {% if is_granted('IS_AUTHENTICATED_FULLY') %} {{app.user.username}} {% endif %} </span></div>
                 <div class="intro-heading text-uppercase"><span>Votre style, notre passion !</span></div><a class="btn btn-primary btn-xl text-uppercase" role="button" href="#services">explorer</a>
             </div>
         </div>
