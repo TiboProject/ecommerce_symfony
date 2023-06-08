@@ -22,10 +22,4 @@ class SecurityController extends AbstractController
             'error' => $error
         ]);
     }
-
-    #[Route('/signup', name: 'app_security_signup')]
-    public function signUp(): Response
-    {
-        return $this->render('security/signUp.html.twig');
-    }
 }
