@@ -30,7 +30,7 @@
                             <div class="row">
                                 <div class="col-md-3 col-sm-6">
                                     <div class="product-grid7">
-                                        <div class="product-image7"><a href="#"><img src="{{asset('img/dave-goudreau-3DVaJkZIZc8-unsplash.jpg')}}" class="pic-1"></a>
+                                        <div class="product-image7"><a href="#"><img src="{{productShirt.picture}}" class="pic-1"></a>
                                             <ul class="social">
                                                 <li><a class="fa fa-search"></a></li>
                                                 <li><a class="fa fa-shopping-bag"></a></li>
@@ -38,7 +38,7 @@
                                             </ul><span class="product-new-label">New</span>
                                         </div>
                                         <div class="product-content">
-                                            <h3 class="title"><a href="#">Men's Blazer</a></h3>
+                                            <h3 class="title"><a href="#">{{productShirt.name}}</a></h3>
                                             <ul class="rating">
                                                 <li class="fa fa-star"></li>
                                                 <li class="fa fa-star"></li>
@@ -46,13 +46,13 @@
                                                 <li class="fa fa-star"></li>
                                                 <li class="fa fa-star"></li>
                                             </ul>
-                                            <div class="price"><span>$15.00</span><span>$20.00</span></div>
+                                            <div class="price"><span>{{productShirt.price}}€</span></div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-3 col-sm-6">
                                     <div class="product-grid7">
-                                        <div class="product-image7"><a href="#"><img src="{{asset('img/dave-goudreau-3DVaJkZIZc8-unsplash.jpg')}}" class="pic-1"></a>
+                                        <div class="product-image7"><a href="#"><img src="{{productShirt2.picture}}" class="pic-1"></a>
                                             <ul class="social">
                                                 <li><a class="fa fa-search"></a></li>
                                                 <li><a class="fa fa-shopping-bag"></a></li>
@@ -60,7 +60,7 @@
                                             </ul>
                                         </div>
                                         <div class="product-content">
-                                            <h3 class="title"><a href="#">Women's White Shirt</a></h3>
+                                            <h3 class="title"><a href="#">{{productShirt2.name}}</a></h3>
                                             <ul class="rating">
                                                 <li class="fa fa-star"></li>
                                                 <li class="fa fa-star"></li>
@@ -68,35 +68,13 @@
                                                 <li class="fa fa-star"></li>
                                                 <li class="fa fa-star"></li>
                                             </ul>
-                                            <div class="price"><span>$15.00</span></div>
+                                            <div class="price"><span>{{productShirt2.price}}€</span></div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-3 col-sm-6">
                                     <div class="product-grid7">
-                                        <div class="product-image7"><a href="#"><img src="{{asset('img/dave-goudreau-3DVaJkZIZc8-unsplash.jpg')}}" class="pic-1"></a>
-                                            <ul class="social">
-                                                <li><a class="fa fa-search"></a></li>
-                                                <li><a class="fa fa-shopping-bag"></a></li>
-                                                <li><a class="fa fa-shopping-cart"></a></li>
-                                            </ul><span class="product-new-label">New</span>
-                                        </div>
-                                        <div class="product-content">
-                                            <h3 class="title"><a href="#">Men's Blazer</a></h3>
-                                            <ul class="rating">
-                                                <li class="fa fa-star"></li>
-                                                <li class="fa fa-star"></li>
-                                                <li class="fa fa-star"></li>
-                                                <li class="fa fa-star"></li>
-                                                <li class="fa fa-star"></li>
-                                            </ul>
-                                            <div class="price"><span>$15.00</span><span></span></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-sm-6">
-                                    <div class="product-grid7">
-                                        <div class="product-image7"><a href="#"><img src="{{asset('img/dave-goudreau-3DVaJkZIZc8-unsplash.jpg')}}" class="pic-1"></a>
+                                        <div class="product-image7"><a href="#"><img src="{{productShirt3.picture}}" class="pic-1"></a>
                                             <ul class="social">
                                                 <li><a class="fa fa-search"></a></li>
                                                 <li><a class="fa fa-shopping-bag"></a></li>
@@ -104,7 +82,7 @@
                                             </ul><span class="product-new-label">New</span>
                                         </div>
                                         <div class="product-content">
-                                            <h3 class="title"><a href="#">Men's Blazer</a></h3>
+                                            <h3 class="title"><a href="#">{{productShirt3.name}}</a></h3>
                                             <ul class="rating">
                                                 <li class="fa fa-star"></li>
                                                 <li class="fa fa-star"></li>
@@ -112,7 +90,29 @@
                                                 <li class="fa fa-star"></li>
                                                 <li class="fa fa-star"></li>
                                             </ul>
-                                            <div class="price"><span>$15.00</span><span>$20.00</span></div>
+                                            <div class="price"><span>{{productShirt3.price}}€</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="product-grid7">
+                                        <div class="product-image7"><a href="#"><img src="{{productShirt4.picture}}" class="pic-1"></a>
+                                            <ul class="social">
+                                                <li><a class="fa fa-search"></a></li>
+                                                <li><a class="fa fa-shopping-bag"></a></li>
+                                                <li><a class="fa fa-shopping-cart"></a></li>
+                                            </ul><span class="product-new-label">New</span>
+                                        </div>
+                                        <div class="product-content">
+                                            <h3 class="title"><a href="#">{{productShirt4.name}}</a></h3>
+                                            <ul class="rating">
+                                                <li class="fa fa-star"></li>
+                                                <li class="fa fa-star"></li>
+                                                <li class="fa fa-star"></li>
+                                                <li class="fa fa-star"></li>
+                                                <li class="fa fa-star"></li>
+                                            </ul>
+                                            <div class="price"><span>{{productShirt4.price}}€</span></div>
                                         </div>
                                     </div>
                                 </div>
@@ -137,7 +137,7 @@
                             <div class="row">
                                 <div class="col-md-3 col-sm-6">
                                     <div class="product-grid7">
-                                        <div class="product-image7"><a href="#"><img src="{{asset('img/dave-goudreau-3DVaJkZIZc8-unsplash.jpg')}}" class="pic-1"></a>
+                                        <div class="product-image7"><a href="#"><img src="{{productShoes.picture}}" class="pic-1"></a>
                                             <ul class="social">
                                                 <li><a class="fa fa-search"></a></li>
                                                 <li><a class="fa fa-shopping-bag"></a></li>
@@ -145,7 +145,7 @@
                                             </ul><span class="product-new-label">New</span>
                                         </div>
                                         <div class="product-content">
-                                            <h3 class="title"><a href="#">Men's Blazer</a></h3>
+                                            <h3 class="title"><a href="#">{{productShoes.name}}</a></h3>
                                             <ul class="rating">
                                                 <li class="fa fa-star"></li>
                                                 <li class="fa fa-star"></li>
@@ -153,13 +153,13 @@
                                                 <li class="fa fa-star"></li>
                                                 <li class="fa fa-star"></li>
                                             </ul>
-                                            <div class="price"><span>$15.00</span><span>$20.00</span></div>
+                                            <div class="price"><span>{{productShoes.price}}€</span></div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-3 col-sm-6">
                                     <div class="product-grid7">
-                                        <div class="product-image7"><a href="#"><img src="{{asset('img/dave-goudreau-3DVaJkZIZc8-unsplash.jpg')}}" class="pic-1"></a>
+                                        <div class="product-image7"><a href="#"><img src="{{productShoes2.picture}}" class="pic-1"></a>
                                             <ul class="social">
                                                 <li><a class="fa fa-search"></a></li>
                                                 <li><a class="fa fa-shopping-bag"></a></li>
@@ -167,7 +167,7 @@
                                             </ul>
                                         </div>
                                         <div class="product-content">
-                                            <h3 class="title"><a href="#">Women's White Shirt</a></h3>
+                                            <h3 class="title"><a href="#">{{productShoes2.name}}</a></h3>
                                             <ul class="rating">
                                                 <li class="fa fa-star"></li>
                                                 <li class="fa fa-star"></li>
@@ -175,35 +175,13 @@
                                                 <li class="fa fa-star"></li>
                                                 <li class="fa fa-star"></li>
                                             </ul>
-                                            <div class="price"><span>$15.00</span></div>
+                                            <div class="price"><span>{{productShoes2.price}}€</span></div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-3 col-sm-6">
                                     <div class="product-grid7">
-                                        <div class="product-image7"><a href="#"><img src="{{asset('img/dave-goudreau-3DVaJkZIZc8-unsplash.jpg')}}" class="pic-1"></a>
-                                            <ul class="social">
-                                                <li><a class="fa fa-search"></a></li>
-                                                <li><a class="fa fa-shopping-bag"></a></li>
-                                                <li><a class="fa fa-shopping-cart"></a></li>
-                                            </ul><span class="product-new-label">New</span>
-                                        </div>
-                                        <div class="product-content">
-                                            <h3 class="title"><a href="#">Men's Blazer</a></h3>
-                                            <ul class="rating">
-                                                <li class="fa fa-star"></li>
-                                                <li class="fa fa-star"></li>
-                                                <li class="fa fa-star"></li>
-                                                <li class="fa fa-star"></li>
-                                                <li class="fa fa-star"></li>
-                                            </ul>
-                                            <div class="price"><span>$15.00</span><span></span></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-sm-6">
-                                    <div class="product-grid7">
-                                        <div class="product-image7"><a href="#"><img src="{{asset('img/dave-goudreau-3DVaJkZIZc8-unsplash.jpg')}}" class="pic-1"></a>
+                                        <div class="product-image7"><a href="#"><img src="{{productShoes3.picture}}" class="pic-1"></a>
                                             <ul class="social">
                                                 <li><a class="fa fa-search"></a></li>
                                                 <li><a class="fa fa-shopping-bag"></a></li>
@@ -211,7 +189,7 @@
                                             </ul><span class="product-new-label">New</span>
                                         </div>
                                         <div class="product-content">
-                                            <h3 class="title"><a href="#">Men's Blazer</a></h3>
+                                            <h3 class="title"><a href="#">{{productShoes3.name}}</a></h3>
                                             <ul class="rating">
                                                 <li class="fa fa-star"></li>
                                                 <li class="fa fa-star"></li>
@@ -219,7 +197,29 @@
                                                 <li class="fa fa-star"></li>
                                                 <li class="fa fa-star"></li>
                                             </ul>
-                                            <div class="price"><span>$15.00</span><span>$20.00</span></div>
+                                            <div class="price"><span>{{productShoes3.price}}€</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="product-grid7">
+                                        <div class="product-image7"><a href="#"><img src="{{productShoes4.picture}}" class="pic-1"></a>
+                                            <ul class="social">
+                                                <li><a class="fa fa-search"></a></li>
+                                                <li><a class="fa fa-shopping-bag"></a></li>
+                                                <li><a class="fa fa-shopping-cart"></a></li>
+                                            </ul><span class="product-new-label">New</span>
+                                        </div>
+                                        <div class="product-content">
+                                            <h3 class="title"><a href="#">{{productShoes4.name}}</a></h3>
+                                            <ul class="rating">
+                                                <li class="fa fa-star"></li>
+                                                <li class="fa fa-star"></li>
+                                                <li class="fa fa-star"></li>
+                                                <li class="fa fa-star"></li>
+                                                <li class="fa fa-star"></li>
+                                            </ul>
+                                            <div class="price"><span>{{productShoes4.price}}€</span></div>
                                         </div>
                                     </div>
                                 </div>
@@ -244,7 +244,7 @@
                             <div class="row">
                                 <div class="col-md-3 col-sm-6">
                                     <div class="product-grid7">
-                                        <div class="product-image7"><a href="#"><img src="{{asset('img/dave-goudreau-3DVaJkZIZc8-unsplash.jpg')}}" class="pic-1"></a>
+                                        <div class="product-image7"><a href="#"><img src="{{product.picture}}" class="pic-1"></a>
                                             <ul class="social">
                                                 <li><a class="fa fa-search"></a></li>
                                                 <li><a class="fa fa-shopping-bag"></a></li>
@@ -252,7 +252,7 @@
                                             </ul><span class="product-new-label">New</span>
                                         </div>
                                         <div class="product-content">
-                                            <h3 class="title"><a href="#">Men's Blazer</a></h3>
+                                            <h3 class="title"><a href="#">{{product.name}}</a></h3>
                                             <ul class="rating">
                                                 <li class="fa fa-star"></li>
                                                 <li class="fa fa-star"></li>
@@ -260,13 +260,13 @@
                                                 <li class="fa fa-star"></li>
                                                 <li class="fa fa-star"></li>
                                             </ul>
-                                            <div class="price"><span>$15.00</span><span>$20.00</span></div>
+                                            <div class="price"><span>{{product.price}}€ </span></div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-3 col-sm-6">
                                     <div class="product-grid7">
-                                        <div class="product-image7"><a href="#"><img src="{{asset('img/dave-goudreau-3DVaJkZIZc8-unsplash.jpg')}}" class="pic-1"></a>
+                                        <div class="product-image7"><a href="#"><img src="{{product2.picture}}" class="pic-1"></a>
                                             <ul class="social">
                                                 <li><a class="fa fa-search"></a></li>
                                                 <li><a class="fa fa-shopping-bag"></a></li>
@@ -274,7 +274,7 @@
                                             </ul>
                                         </div>
                                         <div class="product-content">
-                                            <h3 class="title"><a href="#">Women's White Shirt</a></h3>
+                                            <h3 class="title"><a href="#">{{product2.name}}</a></h3>
                                             <ul class="rating">
                                                 <li class="fa fa-star"></li>
                                                 <li class="fa fa-star"></li>
@@ -282,35 +282,13 @@
                                                 <li class="fa fa-star"></li>
                                                 <li class="fa fa-star"></li>
                                             </ul>
-                                            <div class="price"><span>$15.00</span></div>
+                                            <div class="price"><span>{{product2.price}}€</span></div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-3 col-sm-6">
                                     <div class="product-grid7">
-                                        <div class="product-image7"><a href="#"><img src="{{asset('img/dave-goudreau-3DVaJkZIZc8-unsplash.jpg')}}" class="pic-1"></a>
-                                            <ul class="social">
-                                                <li><a class="fa fa-search"></a></li>
-                                                <li><a class="fa fa-shopping-bag"></a></li>
-                                                <li><a class="fa fa-shopping-cart"></a></li>
-                                            </ul><span class="product-new-label">New</span>
-                                        </div>
-                                        <div class="product-content">
-                                            <h3 class="title"><a href="#">Men's Blazer</a></h3>
-                                            <ul class="rating">
-                                                <li class="fa fa-star"></li>
-                                                <li class="fa fa-star"></li>
-                                                <li class="fa fa-star"></li>
-                                                <li class="fa fa-star"></li>
-                                                <li class="fa fa-star"></li>
-                                            </ul>
-                                            <div class="price"><span>$15.00</span><span></span></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-sm-6">
-                                    <div class="product-grid7">
-                                        <div class="product-image7"><a href="#"><img src="{{asset('img/dave-goudreau-3DVaJkZIZc8-unsplash.jpg')}}" class="pic-1"></a>
+                                        <div class="product-image7"><a href="#"><img src="{{product3.picture}}" class="pic-1"></a>
                                             <ul class="social">
                                                 <li><a class="fa fa-search"></a></li>
                                                 <li><a class="fa fa-shopping-bag"></a></li>
@@ -318,7 +296,7 @@
                                             </ul><span class="product-new-label">New</span>
                                         </div>
                                         <div class="product-content">
-                                            <h3 class="title"><a href="#">Men's Blazer</a></h3>
+                                            <h3 class="title"><a href="#">{{product3.name}}</a></h3>
                                             <ul class="rating">
                                                 <li class="fa fa-star"></li>
                                                 <li class="fa fa-star"></li>
@@ -326,7 +304,28 @@
                                                 <li class="fa fa-star"></li>
                                                 <li class="fa fa-star"></li>
                                             </ul>
-                                            <div class="price"><span>$15.00</span><span>$20.00</span></div>
+                                            <div class="price"><span>{{product3.price}}€ </span><span></span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="product-grid7">
+                                        <div class="product-image7"><a href="#"><img src="{{product4.picture}}" class="pic-1"></a>
+                                            <ul class="social">
+                                                <li><a class="fa fa-search"></a></li>
+                                                <li><a class="fa fa-shopping-bag"></a></li>
+                                                <li><a class="fa fa-shopping-cart"></a></li>
+                                        </div>
+                                        <div class="product-content">
+                                            <h3 class="title"><a href="#">{{product4.name}}</a></h3>
+                                            <ul class="rating">
+                                                <li class="fa fa-star"></li>
+                                                <li class="fa fa-star"></li>
+                                                <li class="fa fa-star"></li>
+                                                <li class="fa fa-star"></li>
+                                                <li class="fa fa-star"></li>
+                                            </ul>
+                                            <div class="price"><span>{{product4.price}}€ </span></div>
                                         </div>
                                     </div>
                                 </div>
@@ -351,7 +350,7 @@
                             <div class="row">
                                 <div class="col-md-3 col-sm-6">
                                     <div class="product-grid7">
-                                        <div class="product-image7"><a href="#"><img src="{{asset('img/dave-goudreau-3DVaJkZIZc8-unsplash.jpg')}}" class="pic-1"></a>
+                                        <div class="product-image7"><a href="#"><img src="{{productBall.picture}}" class="pic-1"></a>
                                             <ul class="social">
                                                 <li><a class="fa fa-search"></a></li>
                                                 <li><a class="fa fa-shopping-bag"></a></li>
@@ -359,7 +358,7 @@
                                             </ul><span class="product-new-label">New</span>
                                         </div>
                                         <div class="product-content">
-                                            <h3 class="title"><a href="#">Men's Blazer</a></h3>
+                                            <h3 class="title"><a href="#">{{productBall.name}}</a></h3>
                                             <ul class="rating">
                                                 <li class="fa fa-star"></li>
                                                 <li class="fa fa-star"></li>
@@ -367,13 +366,13 @@
                                                 <li class="fa fa-star"></li>
                                                 <li class="fa fa-star"></li>
                                             </ul>
-                                            <div class="price"><span>$15.00</span><span>$20.00</span></div>
+                                            <div class="price"><span>{{productBall.price}}€</span></div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-3 col-sm-6">
                                     <div class="product-grid7">
-                                        <div class="product-image7"><a href="#"><img src="{{asset('img/dave-goudreau-3DVaJkZIZc8-unsplash.jpg')}}" class="pic-1"></a>
+                                        <div class="product-image7"><a href="#"><img src="{{productBall2.picture}}" class="pic-1"></a>
                                             <ul class="social">
                                                 <li><a class="fa fa-search"></a></li>
                                                 <li><a class="fa fa-shopping-bag"></a></li>
@@ -381,7 +380,7 @@
                                             </ul>
                                         </div>
                                         <div class="product-content">
-                                            <h3 class="title"><a href="#">Women's White Shirt</a></h3>
+                                            <h3 class="title"><a href="#">{{productBall2.name}}</a></h3>
                                             <ul class="rating">
                                                 <li class="fa fa-star"></li>
                                                 <li class="fa fa-star"></li>
@@ -389,35 +388,13 @@
                                                 <li class="fa fa-star"></li>
                                                 <li class="fa fa-star"></li>
                                             </ul>
-                                            <div class="price"><span>$15.00</span></div>
+                                            <div class="price"><span>{{productBall2.price}}€</span></div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-3 col-sm-6">
                                     <div class="product-grid7">
-                                        <div class="product-image7"><a href="#"><img src="{{asset('img/dave-goudreau-3DVaJkZIZc8-unsplash.jpg')}}" class="pic-1"></a>
-                                            <ul class="social">
-                                                <li><a class="fa fa-search"></a></li>
-                                                <li><a class="fa fa-shopping-bag"></a></li>
-                                                <li><a class="fa fa-shopping-cart"></a></li>
-                                            </ul><span class="product-new-label">New</span>
-                                        </div>
-                                        <div class="product-content">
-                                            <h3 class="title"><a href="#">Men's Blazer</a></h3>
-                                            <ul class="rating">
-                                                <li class="fa fa-star"></li>
-                                                <li class="fa fa-star"></li>
-                                                <li class="fa fa-star"></li>
-                                                <li class="fa fa-star"></li>
-                                                <li class="fa fa-star"></li>
-                                            </ul>
-                                            <div class="price"><span>$15.00</span><span></span></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-sm-6">
-                                    <div class="product-grid7">
-                                        <div class="product-image7"><a href="#"><img src="{{asset('img/dave-goudreau-3DVaJkZIZc8-unsplash.jpg')}}" class="pic-1"></a>
+                                        <div class="product-image7"><a href="#"><img src="{{productBall3.picture}}" class="pic-1"></a>
                                             <ul class="social">
                                                 <li><a class="fa fa-search"></a></li>
                                                 <li><a class="fa fa-shopping-bag"></a></li>
@@ -425,7 +402,7 @@
                                             </ul><span class="product-new-label">New</span>
                                         </div>
                                         <div class="product-content">
-                                            <h3 class="title"><a href="#">Men's Blazer</a></h3>
+                                            <h3 class="title"><a href="#">{{productBall3.name}}</a></h3>
                                             <ul class="rating">
                                                 <li class="fa fa-star"></li>
                                                 <li class="fa fa-star"></li>
@@ -433,7 +410,29 @@
                                                 <li class="fa fa-star"></li>
                                                 <li class="fa fa-star"></li>
                                             </ul>
-                                            <div class="price"><span>$15.00</span><span>$20.00</span></div>
+                                            <div class="price"><span>{{productBall3.price}}€</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="product-grid7">
+                                        <div class="product-image7"><a href="#"><img src="{{productBall4.picture}}" class="pic-1"></a>
+                                            <ul class="social">
+                                                <li><a class="fa fa-search"></a></li>
+                                                <li><a class="fa fa-shopping-bag"></a></li>
+                                                <li><a class="fa fa-shopping-cart"></a></li>
+                                            </ul><span class="product-new-label">New</span>
+                                        </div>
+                                        <div class="product-content">
+                                            <h3 class="title"><a href="#">{{productBall4.name}}</a></h3>
+                                            <ul class="rating">
+                                                <li class="fa fa-star"></li>
+                                                <li class="fa fa-star"></li>
+                                                <li class="fa fa-star"></li>
+                                                <li class="fa fa-star"></li>
+                                                <li class="fa fa-star"></li>
+                                            </ul>
+                                            <div class="price"><span>{{productBall4.price}}€</span></div>
                                         </div>
                                     </div>
                                 </div>
@@ -458,7 +457,7 @@
                             <div class="row">
                                 <div class="col-md-3 col-sm-6">
                                     <div class="product-grid7">
-                                        <div class="product-image7"><a href="#"><img src="{{asset('img/dave-goudreau-3DVaJkZIZc8-unsplash.jpg')}}" class="pic-1"></a>
+                                        <div class="product-image7"><a href="#"><img src="{{productGloves.picture}}" class="pic-1"></a>
                                             <ul class="social">
                                                 <li><a class="fa fa-search"></a></li>
                                                 <li><a class="fa fa-shopping-bag"></a></li>
@@ -466,7 +465,7 @@
                                             </ul><span class="product-new-label">New</span>
                                         </div>
                                         <div class="product-content">
-                                            <h3 class="title"><a href="#">Men's Blazer</a></h3>
+                                            <h3 class="title"><a href="#">{{productGloves.name}}</a></h3>
                                             <ul class="rating">
                                                 <li class="fa fa-star"></li>
                                                 <li class="fa fa-star"></li>
@@ -474,13 +473,13 @@
                                                 <li class="fa fa-star"></li>
                                                 <li class="fa fa-star"></li>
                                             </ul>
-                                            <div class="price"><span>$15.00</span><span>$20.00</span></div>
+                                            <div class="price"><span>{{productGloves.price}}€</span></div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-3 col-sm-6">
                                     <div class="product-grid7">
-                                        <div class="product-image7"><a href="#"><img src="{{asset('img/dave-goudreau-3DVaJkZIZc8-unsplash.jpg')}}" class="pic-1"></a>
+                                        <div class="product-image7"><a href="#"><img src="{{productGloves2.picture}}" class="pic-1"></a>
                                             <ul class="social">
                                                 <li><a class="fa fa-search"></a></li>
                                                 <li><a class="fa fa-shopping-bag"></a></li>
@@ -488,7 +487,7 @@
                                             </ul>
                                         </div>
                                         <div class="product-content">
-                                            <h3 class="title"><a href="#">Women's White Shirt</a></h3>
+                                            <h3 class="title"><a href="#">{{productGloves2.name}}</a></h3>
                                             <ul class="rating">
                                                 <li class="fa fa-star"></li>
                                                 <li class="fa fa-star"></li>
@@ -496,35 +495,13 @@
                                                 <li class="fa fa-star"></li>
                                                 <li class="fa fa-star"></li>
                                             </ul>
-                                            <div class="price"><span>$15.00</span></div>
+                                            <div class="price"><span>{{productGloves2.price}}€</span></div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-3 col-sm-6">
                                     <div class="product-grid7">
-                                        <div class="product-image7"><a href="#"><img src="{{asset('img/dave-goudreau-3DVaJkZIZc8-unsplash.jpg')}}" class="pic-1"></a>
-                                            <ul class="social">
-                                                <li><a class="fa fa-search"></a></li>
-                                                <li><a class="fa fa-shopping-bag"></a></li>
-                                                <li><a class="fa fa-shopping-cart"></a></li>
-                                            </ul><span class="product-new-label">New</span>
-                                        </div>
-                                        <div class="product-content">
-                                            <h3 class="title"><a href="#">Men's Blazer</a></h3>
-                                            <ul class="rating">
-                                                <li class="fa fa-star"></li>
-                                                <li class="fa fa-star"></li>
-                                                <li class="fa fa-star"></li>
-                                                <li class="fa fa-star"></li>
-                                                <li class="fa fa-star"></li>
-                                            </ul>
-                                            <div class="price"><span>$15.00</span><span></span></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-sm-6">
-                                    <div class="product-grid7">
-                                        <div class="product-image7"><a href="#"><img src="{{asset('img/dave-goudreau-3DVaJkZIZc8-unsplash.jpg')}}" class="pic-1"></a>
+                                        <div class="product-image7"><a href="#"><img src="{{productGloves3.picture}}" class="pic-1"></a>
                                             <ul class="social">
                                                 <li><a class="fa fa-search"></a></li>
                                                 <li><a class="fa fa-shopping-bag"></a></li>
@@ -532,7 +509,7 @@
                                             </ul><span class="product-new-label">New</span>
                                         </div>
                                         <div class="product-content">
-                                            <h3 class="title"><a href="#">Men's Blazer</a></h3>
+                                            <h3 class="title"><a href="#">{{productGloves3.name}}</a></h3>
                                             <ul class="rating">
                                                 <li class="fa fa-star"></li>
                                                 <li class="fa fa-star"></li>
@@ -540,7 +517,29 @@
                                                 <li class="fa fa-star"></li>
                                                 <li class="fa fa-star"></li>
                                             </ul>
-                                            <div class="price"><span>$15.00</span><span>$20.00</span></div>
+                                            <div class="price"><span>{{productGloves3.price}}€</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="product-grid7">
+                                        <div class="product-image7"><a href="#"><img src="{{productGloves4.picture}}" class="pic-1"></a>
+                                            <ul class="social">
+                                                <li><a class="fa fa-search"></a></li>
+                                                <li><a class="fa fa-shopping-bag"></a></li>
+                                                <li><a class="fa fa-shopping-cart"></a></li>
+                                            </ul><span class="product-new-label">New</span>
+                                        </div>
+                                        <div class="product-content">
+                                            <h3 class="title"><a href="#">{{productGloves4.name}}</a></h3>
+                                            <ul class="rating">
+                                                <li class="fa fa-star"></li>
+                                                <li class="fa fa-star"></li>
+                                                <li class="fa fa-star"></li>
+                                                <li class="fa fa-star"></li>
+                                                <li class="fa fa-star"></li>
+                                            </ul>
+                                            <div class="price"><span>{{productGloves4.price}}€</span></div>
                                         </div>
                                     </div>
                                 </div>
@@ -565,7 +564,7 @@
                             <div class="row">
                                 <div class="col-md-3 col-sm-6">
                                     <div class="product-grid7">
-                                        <div class="product-image7"><a href="#"><img src="{{asset('img/dave-goudreau-3DVaJkZIZc8-unsplash.jpg')}}" class="pic-1"></a>
+                                        <div class="product-image7"><a href="#"><img src="{{productGoodies.picture}}" class="pic-1"></a>
                                             <ul class="social">
                                                 <li><a class="fa fa-search"></a></li>
                                                 <li><a class="fa fa-shopping-bag"></a></li>
@@ -573,7 +572,7 @@
                                             </ul><span class="product-new-label">New</span>
                                         </div>
                                         <div class="product-content">
-                                            <h3 class="title"><a href="#">Men's Blazer</a></h3>
+                                            <h3 class="title"><a href="#">{{productGoodies.name}}</a></h3>
                                             <ul class="rating">
                                                 <li class="fa fa-star"></li>
                                                 <li class="fa fa-star"></li>
@@ -581,13 +580,13 @@
                                                 <li class="fa fa-star"></li>
                                                 <li class="fa fa-star"></li>
                                             </ul>
-                                            <div class="price"><span>$15.00</span><span>$20.00</span></div>
+                                            <div class="price"><span>{{productGoodies.price}}€</span></div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-3 col-sm-6">
                                     <div class="product-grid7">
-                                        <div class="product-image7"><a href="#"><img src="{{asset('img/dave-goudreau-3DVaJkZIZc8-unsplash.jpg')}}" class="pic-1"></a>
+                                        <div class="product-image7"><a href="#"><img src="{{productGoodies2.picture}}" class="pic-1"></a>
                                             <ul class="social">
                                                 <li><a class="fa fa-search"></a></li>
                                                 <li><a class="fa fa-shopping-bag"></a></li>
@@ -595,7 +594,7 @@
                                             </ul>
                                         </div>
                                         <div class="product-content">
-                                            <h3 class="title"><a href="#">Women's White Shirt</a></h3>
+                                            <h3 class="title"><a href="#">{{productGoodies2.name}}</a></h3>
                                             <ul class="rating">
                                                 <li class="fa fa-star"></li>
                                                 <li class="fa fa-star"></li>
@@ -603,35 +602,13 @@
                                                 <li class="fa fa-star"></li>
                                                 <li class="fa fa-star"></li>
                                             </ul>
-                                            <div class="price"><span>$15.00</span></div>
+                                            <div class="price"><span>{{productGoodies2.price}}€</span></div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-3 col-sm-6">
                                     <div class="product-grid7">
-                                        <div class="product-image7"><a href="#"><img src="{{asset('img/dave-goudreau-3DVaJkZIZc8-unsplash.jpg')}}" class="pic-1"></a>
-                                            <ul class="social">
-                                                <li><a class="fa fa-search"></a></li>
-                                                <li><a class="fa fa-shopping-bag"></a></li>
-                                                <li><a class="fa fa-shopping-cart"></a></li>
-                                            </ul><span class="product-new-label">New</span>
-                                        </div>
-                                        <div class="product-content">
-                                            <h3 class="title"><a href="#">Men's Blazer</a></h3>
-                                            <ul class="rating">
-                                                <li class="fa fa-star"></li>
-                                                <li class="fa fa-star"></li>
-                                                <li class="fa fa-star"></li>
-                                                <li class="fa fa-star"></li>
-                                                <li class="fa fa-star"></li>
-                                            </ul>
-                                            <div class="price"><span>$15.00</span><span></span></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-sm-6">
-                                    <div class="product-grid7">
-                                        <div class="product-image7"><a href="#"><img src="{{asset('img/dave-goudreau-3DVaJkZIZc8-unsplash.jpg')}}" class="pic-1"></a>
+                                        <div class="product-image7"><a href="#"><img src="{{productGoodies3.picture}}" class="pic-1"></a>
                                             <ul class="social">
                                                 <li><a class="fa fa-search"></a></li>
                                                 <li><a class="fa fa-shopping-bag"></a></li>
@@ -639,7 +616,7 @@
                                             </ul><span class="product-new-label">New</span>
                                         </div>
                                         <div class="product-content">
-                                            <h3 class="title"><a href="#">Men's Blazer</a></h3>
+                                            <h3 class="title"><a href="#">{{productGoodies3.name}}</a></h3>
                                             <ul class="rating">
                                                 <li class="fa fa-star"></li>
                                                 <li class="fa fa-star"></li>
@@ -647,7 +624,29 @@
                                                 <li class="fa fa-star"></li>
                                                 <li class="fa fa-star"></li>
                                             </ul>
-                                            <div class="price"><span>$15.00</span><span>$20.00</span></div>
+                                            <div class="price"><span>{{productGoodies3.price}}€</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="product-grid7">
+                                        <div class="product-image7"><a href="#"><img src="{{productGoodies4.picture}}" class="pic-1"></a>
+                                            <ul class="social">
+                                                <li><a class="fa fa-search"></a></li>
+                                                <li><a class="fa fa-shopping-bag"></a></li>
+                                                <li><a class="fa fa-shopping-cart"></a></li>
+                                            </ul><span class="product-new-label">New</span>
+                                        </div>
+                                        <div class="product-content">
+                                            <h3 class="title"><a href="#">{{productGoodies4.name}}</a></h3>
+                                            <ul class="rating">
+                                                <li class="fa fa-star"></li>
+                                                <li class="fa fa-star"></li>
+                                                <li class="fa fa-star"></li>
+                                                <li class="fa fa-star"></li>
+                                                <li class="fa fa-star"></li>
+                                            </ul>
+                                            <div class="price"><span>{{productGoodies4.price}}€</span></div>
                                         </div>
                                     </div>
                                 </div>
