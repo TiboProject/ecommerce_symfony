@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\User;
 use App\Form\RegistrationFormType;
+use App\Form\RequestVerifyUserEmailFormType;
 use App\Repository\UserRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -78,25 +79,38 @@ class RegistrationController extends AbstractController
 
 
     #[Route('/resend/verify/email', name: 'app_resend_verify_email')]
-    public function resendVerifyEmail(Request $request, VerifyEmailHelperInterface $verifyEmailHelperInterface, UserRepository $userRepository)
+    public function resendVerifyEmail(Request $request, UserRepository $userRepository, VerifyEmailHelperInterface $verifyEmailHelperInterface)
     {
-        ///si la méthode est POST, on regenere un lien de vérification et on envoie un mail
-        ///sinon on affiche le formulaire
-        if($request->isMethod('POST')){
-            ///on récupère l'utilisateur
-            $user = $userRepository->find($request->get('id'));
-            ///on regenere le lien de vérification
+        if($this->getUser()){
+            return $this->redirectToRoute('app_homepage');
+        }
+        $form=$this->createForm(RequestVerifyUserEmailFormType::class);
+        $form->handleRequest($request);
+        if($form->isSubmitted() && $form->isValid() ){
+            $user = $userRepository->findOneBy(['mail' => $form->get('mail')->getData()]);
+            if(!$user){
+                $this->addFlash('danger', 'Utilisateur inconnu');
+                return $this->redirectToRoute('app_security_login');
+            }
+            if($user->getIsVerified()){
+                $this->addFlash('danger', 'Votre email est déjà vérifié, connectez vous pour accéder à votre compte');
+                return $this->redirectToRoute('app_security_login');
+            }
+            ///else
             $signatureComponents = $verifyEmailHelperInterface->generateSignature(
                 'app_verify_email',
                 $user->getId(),
                 $user->getMail(),
                 ['id' => $user->getId()]
             );
-            ///on affiche un message flash
-            $this->addFlash('success', 'Un nouveau mail de vérification vous a été envoyé : '.$signatureComponents->getSignedUrl());
-            ///on redirige vers la page de login
+
+            ///A faire : envoyer un vrai mail, en V1 ce sera un message flash
+            $this->addFlash('success', 'Confirmez votre email ici : '.$signatureComponents->getSignedUrl());
+
             return $this->redirectToRoute('app_security_login');
         }
-        return $this->render('registration/resendVerifyEmail.html.twig');
+        return $this->render('registration/resend_verify_email.html.twig', [
+            'resendVerifyEmailForm' => $form->createView(),
+        ]);
     }
 }

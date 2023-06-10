@@ -8,8 +8,6 @@ use App\Security\AccountNotVerifiedAuthenticationException;
 use Symfony\Component\Security\Http\Event\LoginFailureEvent;
 use Symfony\Component\Security\Http\Event\CheckPassportEvent;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
-use Symfony\Component\Security\Core\Exception\AuthenticationException;
-use Symfony\Component\Security\Core\Exception\CustomUserMessageAuthenticationException;
 
 class CheckVerifiedUserSubscriber implements EventSubscriberInterface
 {
