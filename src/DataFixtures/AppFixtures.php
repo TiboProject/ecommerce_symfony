@@ -10,6 +10,7 @@ use App\Entity\Stock;
 use App\Entity\Product;
 use App\Entity\Location;
 use App\Entity\OrderLine;
+use App\Entity\Team;
 use Doctrine\Persistence\ObjectManager;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
@@ -136,7 +137,16 @@ class AppFixtures extends Fixture
 
         }
 
+        for ($i=0;$i<=4;$i++)
+        {
+            $EquipeFav=array('Paris','Lyon', 'Réal Madrid', 'Marseille');
+            $EquipeLogo=array('');
+            $team= new Team();
+            $team->setname($EquipeFav[$i])
+                ->setpicture($EquipeLogo[$i]);
 
+            $manager->persist($team);
+        }
 
         for ($i=1;$i<=5;$i++)
         {

@@ -33,6 +33,9 @@ class Product
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $picture = null;
 
+    #[ORM\ManyToOne(inversedBy: 'products')]
+    private ?Team $team = null;
+
     public function __construct()
     {
         $this->orderLines = new ArrayCollection();
@@ -134,6 +137,18 @@ class Product
     public function setPicture(?string $picture): self
     {
         $this->picture = $picture;
+
+        return $this;
+    }
+
+    public function getTeam(): ?Team
+    {
+        return $this->team;
+    }
+
+    public function setTeam(?Team $team): static
+    {
+        $this->team = $team;
 
         return $this;
     }

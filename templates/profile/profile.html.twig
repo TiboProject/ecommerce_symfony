@@ -3,7 +3,6 @@
 {% block title %}Profile{% endblock %}
 
 {% block body %}
-<body>
     <section style="margin-bottom: 0px;">
         <div class="col-lg-12 p-5 bg-white rounded shadow-sm mb-5">
             <div class="row mb-5">
@@ -16,16 +15,16 @@
                             <div class="card-body">
                                 <form>
                                     <div class="row" style="margin-bottom: 25px;text-align: left;">
-                                        <div class="col-sm-4 col-md-4 col-lg-3 col-xl-2 col-xxl-2" style="display: inline;text-align: center;margin-bottom: 25px;"><img class="rounded-circle mb-3 mt-4 img-fluid" src="{{asset('img/dogs/image2.jpeg')}}" style="display: inline;max-height: 110px;"><br><button class="btn btn-primary btn-sm" id="photoBtn" type="button">Générer</button></div>
+                                        <div class="col-sm-4 col-md-4 col-lg-3 col-xl-2 col-xxl-2" style="display: inline;text-align: center;margin-bottom: 25px;"><img class="rounded-circle mb-3 mt-4 img-fluid" src="{{asset('img/PSG_FC_logo.jpg')}}" style="display: inline;max-height: 110px;"><br></div>
                                         <div class="col-sm-8 col-md-8 col-lg-9 col-xl-10 col-xxl-10 align-self-center">
                                             <div class="row">
-                                                <div class="col-md-12 text-start">
+                                                <div class="col-md-12 col-xl-5 text-start">
                                                     <div class="mb-3">
                                                         <h1>Adresse mail</h1>
                                                         <p>{{ app.user.mail }}</p>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-12 text-start">
+                                                <div class="col-md-12 col-xl-7 text-start">
                                                     <div class="mb-3">
                                                         <h1>Pseudo</h1>
                                                         <p>{{ app.user.username }}</p>
@@ -35,16 +34,17 @@
                                         </div>
                                         <div class="col-md-12" style="text-align: right;margin-top: 5px;">
                                             <p style="text-align: center;">Choisissez votre équipe préférée !</p>
-                                            <div class="select"><select class="form-select">
-                                                    <optgroup label="This is a group">
-                                                        <option value="12" selected="">This is item 1</option>
-                                                        <option value="13">This is item 2</option>
-                                                        <option value="14">This is item 3</option>
-                                                    </optgroup>
-                                                </select></div>
+                                            <div class="select">
+                                                {{ form_start(SelectTeam) }}
+                                                    <div class="form">{{ form_row(SelectTeam.favTeam, {'label':'Equipe favorite', 'attr':{'class':'form-select','type':'select'}}) }}</div>
+                                            </div> 
+                                            </div> 
+                                            </div>
+                                            <button class="btn btn-primary btn-sm" type="submit" id="photoBtn-1" type="button">Valider</button>
+                                                {{ form_end(SelectTeam) }}
+                                            </div>
                                         </div>
                                     </div>
-                                </form><button class="btn btn-primary btn-sm" id="photoBtn-1" type="button">Valider</button>
                             </div>
                         </div>
                     </div>
@@ -106,7 +106,6 @@
             </section>
         </div>
     </section>
-</body>
 
 
 {% endblock %}
