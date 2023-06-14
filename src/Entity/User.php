@@ -40,6 +40,9 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column]
     private bool $isVerified = false;
 
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $favTeam = null;
+
     public function __construct()
     {
         $this->orders = new ArrayCollection();
@@ -175,6 +178,18 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function setIsVerified(bool $isVerified): self
     {
         $this->isVerified = $isVerified;
+
+        return $this;
+    }
+
+    public function getFavTeam(): ?string
+    {
+        return $this->favTeam;
+    }
+
+    public function setFavTeam(?string $favTeam): static
+    {
+        $this->favTeam = $favTeam;
 
         return $this;
     }

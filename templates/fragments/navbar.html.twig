@@ -12,7 +12,7 @@
                 <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
             </ul>
                 {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-                    <a class="btn btn-primary btn-primary btn-sm ms-1" role="button" style="margin-top: 10px;" href="{{path('app_logout')}}">Mon compte</a>
+                    <a class="btn btn-primary btn-primary btn-sm ms-1" role="button" style="margin-top: 10px;" href="{{path('app_profile')}}">Mon compte</a>
                     <a class="btn btn-primary btn-primary btn-sm ms-1" role="button" style="margin-top: 10px;" href="{{path('app_logout')}}">Déconnexion</a>
                 {% elseif app.request.pathinfo =="/register" or  app.request.pathinfo =="/login"%}
                     <a class="btn btn-primary btn-primary btn-sm ms-1" role="button" style="margin-top: 10px;" {% if app.request.pathinfo =="/register" %} href="{{path('app_security_login')}}" {% else %} href="{{path('app_register')}}" {% endif %}>{% if app.request.pathinfo =="/register" %} Se connecter {% else %} S'inscrire {% endif %}</a>
