@@ -105,4 +105,20 @@
             </div>
         </div>
     </section>
+    <script>
+    var botmanWidget = {
+        frameEndpoint: '{{ path("chat_frame") }}',
+        chatServer: '{{ path("chat_message") }}',
+        introMessage: 'Hello, I am a chatbot. Ask me anything. I reply with my AI brain. Vous pouvez aussi me parler en français.',
+        title: 'AI-chatbot',
+        mainColor: '#fed136',
+        color: '#fed136',
+        bubbleBackground: '#fed136',
+        aboutText: 'Powered by BotMan and Symfony',
+        placeholderText: 'Demande moi ce que tu veux...',
+        aboutLink: 'https://github.com/TiboProject/ecommerce_symfony',
+        displayMessageTime: true
+    };
+</script>
+<script src='https://cdn.jsdelivr.net/npm/botman-web-widget@0/build/js/widget.js'></script>
 {% endblock %}
