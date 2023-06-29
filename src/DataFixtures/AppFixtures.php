@@ -137,13 +137,13 @@ class AppFixtures extends Fixture
 
         }
 
-        for ($i=0;$i<=4;$i++)
+        for ($i=0;$i<=3;$i++)
         {
-            $EquipeFav=array('Paris','Lyon', 'Réal Madrid', 'Marseille');
-            $EquipeLogo=array('');
+            $EquipeFav=array('MC.City','Lyon', 'Réal Madrid', 'Marseille');
+            $EquipeLogo=array('https://i.goopics.net/nbpgns.jpg','https://i.goopics.net/33yvh0.jpg','https://i.goopics.net/2rzxuy.jpg','https://i.goopics.net/73ehec.png');
             $team= new Team();
-            $team->setname($EquipeFav[$i])
-                ->setpicture($EquipeLogo[$i]);
+            $team->setName($EquipeFav[$i])
+                ->setPicture($EquipeLogo[$i]);
 
             $manager->persist($team);
         }

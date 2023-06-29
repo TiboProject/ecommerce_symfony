@@ -21,7 +21,7 @@ class ProfileController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) 
         {
-            // encode the plain password
+            dd($form->getData());
             $user->setFavTeam(
                 $form->get('favTeam')->getData()
             );
@@ -29,7 +29,6 @@ class ProfileController extends AbstractController
             $entityManager->persist($user);
             $entityManager->flush();
         }
-        
         return $this->render('profile/profile.html.twig',[
             'SelectTeam' => $form->createView(),
         ]);

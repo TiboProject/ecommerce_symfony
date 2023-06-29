@@ -40,8 +40,11 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column]
     private bool $isVerified = false;
 
-    #[ORM\Column(length: 255, nullable: true)]
-    private ?string $favTeam = null;
+    #[ORM\ManyToOne(inversedBy: 'utilisateurs')]
+    private ?Team $favTeam = null;
+
+
+
 
     public function __construct()
     {
@@ -182,15 +185,17 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this;
     }
 
-    public function getFavTeam(): ?string
+    public function getFavTeam(): ?Team
     {
         return $this->favTeam;
     }
 
-    public function setFavTeam(?string $favTeam): static
+    public function setFavTeam(?Team $favTeam): static
     {
         $this->favTeam = $favTeam;
 
         return $this;
     }
+
+
 }

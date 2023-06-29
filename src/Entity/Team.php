@@ -24,9 +24,15 @@ class Team
     #[ORM\OneToMany(mappedBy: 'team', targetEntity: Product::class)]
     private Collection $products;
 
+    #[ORM\OneToMany(mappedBy: 'favTeam', targetEntity: User::class)]
+    private Collection $utilisateurs;
+
+
+
     public function __construct()
     {
         $this->products = new ArrayCollection();
+        $this->utilisateurs = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -87,4 +93,39 @@ class Team
 
         return $this;
     }
+
+    /**
+     * @return Collection<int, User>
+     */
+    public function getUtilisateurs(): Collection
+    {
+        return $this->utilisateurs;
+    }
+
+    public function addUtilisateur(User $utilisateur): static
+    {
+        if (!$this->utilisateurs->contains($utilisateur)) {
+            $this->utilisateurs->add($utilisateur);
+            $utilisateur->setFavTeam($this);
+        }
+
+        return $this;
+    }
+
+    public function removeUtilisateur(User $utilisateur): static
+    {
+        if ($this->utilisateurs->removeElement($utilisateur)) {
+            // set the owning side to null (unless already changed)
+            if ($utilisateur->getFavTeam() === $this) {
+                $utilisateur->setFavTeam(null);
+            }
+        }
+
+        return $this;
+    }
+
+
+
+
+
 }
