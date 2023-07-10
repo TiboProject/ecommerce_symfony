@@ -2,7 +2,6 @@
 
 namespace App\DataFixtures;
 
-use Faker;
 use DateTime;
 use App\Entity\User;
 use App\Entity\Order;
@@ -10,6 +9,7 @@ use App\Entity\Stock;
 use App\Entity\Product;
 use App\Entity\Location;
 use App\Entity\OrderLine;
+use App\Entity\Team;
 use Doctrine\Persistence\ObjectManager;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
@@ -136,7 +136,16 @@ class AppFixtures extends Fixture
 
         }
 
+        for ($i=0;$i<=3;$i++)
+        {
+            $EquipeFav=array('MC.City','Lyon', 'Real Madrid', 'Paris SG');
+            $EquipeLogo=array('https://i.goopics.net/dkop3e.jpg','https://i.goopics.net/qse62b.jpg','https://i.goopics.net/0v6ipr.jpg','https://i.goopics.net/er7r38.jpg');
+            $team= new Team();
+            $team->setName($EquipeFav[$i])
+                ->setPicture($EquipeLogo[$i]);
 
+            $manager->persist($team);
+        }
 
         for ($i=1;$i<=5;$i++)
         {
@@ -151,12 +160,16 @@ class AppFixtures extends Fixture
         }
 
         $orderLine= new OrderLine();
+        $orderLine2= new OrderLine();
+        $orderLine3= new Orderline();
+
         $order= new Order();
+        $order2= new Order();
 
         $newUser= new User();
-        $newUser->setMail("Utilisateur54@mail.com")
-                ->setPassword($this->passwordHasher->hashPassword($newUser,"UtilisateurPassword$54"))
-                ->setUsername("Utilisateur54")
+        $newUser->setMail("maxou@hotmail.fr")
+                ->setPassword($this->passwordHasher->hashPassword($newUser,"motdepasse"))
+                ->setUsername("NeymarJr")
                 ->setIsVerified(true)
                 ->setRewardPoints(3612);
         $newLocation= new Location();
@@ -164,24 +177,61 @@ class AppFixtures extends Fixture
                 ->setAdresse("9ter rue du president kennedy")
                 ->setCodePostal(94220);
 
-        $order->setUser($newUser);
+        $newLocation2= new Location();
+        $newLocation2->setVille('Clamart')
+                ->setAdresse("8 rue du botibo")
+                ->setCodePostal(92140);
+
         $order->setLocation($newLocation);
         $order->setStatus('en attente de livraison');
         $order->setDateOrder(new DateTime());
-        $orderLine->setCommande($order);
-        $newProduct= new Product();
-        $newProduct->setName('Maillot neymar')
-            ->setCategory('Maillot')
-            ->setPicture("https://fakeimg.pl/350x200/?text=World&font=lobster")
-            ->setPrice("99999");
-        $orderLine->setProduct($newProduct);
 
+        $order2->setLocation($newLocation2);
+        $order2->setStatus('en attente de livraison');
+        $order2->setDateOrder(new DateTime());
+        
+
+        $newUser->addOrder($order);
+        $newUser->addOrder($order2);
+
+        $newProduct= new Product();
+        $newProduct->setName('Maillot NeymarJr')
+            ->setCategory('Maillot')
+            ->setPicture("https://i.goopics.net/gqt9vk.jpg")
+            ->setPrice("60");
         $orderLine->setQuantity(1);
 
+        $newProduct2= new Product();
+        $newProduct2->setName('Maillot Bellingham')
+            ->setCategory('Maillot')
+            ->setPicture("https://i.goopics.net/hq8an8.jpg")
+            ->setPrice("60");
+        $orderLine2->setQuantity(2);
+
+        $newProduct3= new Product();
+        $newProduct3->setName('Ballon Lyon')
+            ->setCategory('Ballon')
+            ->setPicture("https://i.goopics.net/95u114.jpg")
+            ->setPrice("15");
+        $orderLine3->setQuantity(1);
+
+        $order->addOrderLine($orderLine);
+        $order->addOrderLine($orderLine2);
+        $order2->addOrderLine($orderLine3);
+        $newProduct->addOrderLine($orderLine);
+        $newProduct2->addOrderLine($orderLine2);
+        $newProduct3->addOrderLine($orderLine3);
+
         $manager->persist($order);
+        $manager->persist($order2);
         $manager->persist($orderLine);
+        $manager->persist($orderLine2);
+        $manager->persist($orderLine3);
         $manager->persist($newLocation);
+        $manager->persist($newLocation2);
         $manager->persist($newProduct);
+        $manager->persist($newProduct2);
+        $manager->persist($newProduct3);
         $manager->persist($newUser);
         $manager->flush();
     }

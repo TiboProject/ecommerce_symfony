@@ -1,0 +1,153 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Profile{% endblock %}
+
+{% block body %}
+    <section style="margin-bottom: 0px;">
+        <div class="col-lg-12 p-5 bg-white rounded shadow-sm mb-5">
+            <div class="row mb-5">
+                <div class="col-md-8 col-xl-6 text-center mx-auto" style="width: 900px;">
+                    <div class="container-fluid">
+                        <div class="card shadow mb-3">
+                            <div class="card-header py-3">
+                                <a class="btn btn-primary btn-primary btn-sm ms-1 ml-3" role="button" style="margin-left: 10px;" href="{{path('app_profile_edition')}}">Modifier mon profil</a>
+                            </div>
+                            <div class="card-body">
+                                    <div class="row" style="margin-bottom: 25px;text-align: left;">
+                                        <div class="col-sm-4 col-md-4 col-lg-3 col-xl-2 col-xxl-2" style="display: inline;text-align: center;margin-bottom: 25px;"><img class="rounded-circle mb-3 mt-4 img-fluid" src="{{teamPicture}}" style="display: inline;max-height: 110px;"><br></div>
+                                        <div class="col-sm-8 col-md-8 col-lg-9 col-xl-10 col-xxl-10 align-self-center">
+                                            <div class="row">
+                                                <div class="col-md-12 col-xl-5 text-start">
+                                                    <div class="mb-3">
+                                                        <h1>Email</h1>
+                                                        <p>{{ app.user.mail }}</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12 col-xl-7 text-start">
+                                                    <div class="mb-3">
+                                                        <h1>Pseudo </h1>
+                                                        <p>{{ app.user.username }}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12" style="text-align: right;margin-top: 5px;">
+                                            <p style="text-align: center;">Choisissez votre équipe préférée !</p>
+                                            <div class="select">
+                                                {{ form_start(SelectTeam) }}
+                                                    <div class="form">{{ form_row(SelectTeam.favTeam, {'label':'Equipe favorite', 'attr':{'class':'form-select','type':'select'}}) }}</div>
+                                            </div> 
+                                            </div> 
+                                            </div>
+                                            <button class="btn btn-primary btn-sm" type="submit" id="photoBtn-1" >Valider</button>
+                                                {{ form_end(SelectTeam) }}
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12 p-5 bg-white rounded shadow-sm mb-5">
+            <div class="row mb-5">
+                <div class="col-md-8 col-xl-6 text-center mx-auto">
+                    <h2>Votre historique de commandes</h2>
+                </div>
+            </div>
+            {% if commandes is not null and commandes|length > 0 %}
+                {% for commande in commandes %}
+                        <div class="shopping-cart">
+                            <div class="px-4 px-lg-0">
+                                <div class="pb-5">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-lg-12 p-5 bg-white rounded shadow-sm mb-5">
+                                                <div class="table-responsive">
+                                                    <table class="table">
+                                                        <thead>
+                                                            <tr>
+                                                                <th class="bg-light border-0" scope="col"><div class="p-2 px-3 text-uppercase">Produit</div></th>
+                                                                <th class="bg-light border-0" scope="col"><div class="py-2 text-uppercase">Prix</div></th>
+                                                                <th class="bg-light border-0" scope="col"><div class="py-2 text-uppercase">Quantité</div></th>
+                                                                <th class="bg-light border-0" scope="col"><div class="py-2 text-uppercase">Etat</div></th>
+                                                                <th class="bg-light border-0" scope="col"><div class="py-2 text-uppercase">Adresse</div></th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            {% for orderLine in commande.orderLines %}
+                                                                <tr>
+                                                                    <td class="border-0" scope="row"><div class="p-2"><img src="{{orderLine.product.picture}}" alt="" width="70" class="img-fluid rounded shadow-sm"><div class="ml-3 d-inline-block align-middle"><h5 class="mb-0"><a href="#" class="text-dark d-inline-block align-middle ms-5">{{orderLine.product.name}}</a></h5><span class="text-muted font-weight-normal font-italic d-block ms-5">Catégorie : {{orderLine.product.category}}</span></div></div></td>
+                                                                    <td class="border-0 align-middle"><p>{{orderLine.product.price}}€</p></td>
+                                                                    <td class="border-0 align-middle"><p>{{orderLine.quantity}}</p></td>
+                                                                    <td class="border-0 align-middle"><p>{{commande.Status}}</p></td>
+                                                                    <td class="border-0 align-middle"><p>{{commande.location.ville}}</p><p>{{commande.location.adresse}}</p></td>
+                                                                </tr>
+                                                            {% endfor %}
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                {% endfor %}
+            {% else %}
+
+
+
+{# }
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th class="bg-light border-0" scope="col"><div class="p-2 px-1 text-uppercase">Produit</div></th>
+                                    <th class="bg-light border-0" scope="col" style="text-align: center;"><div class="py-2 text-uppercase">Prix</div></th>
+                                    <th class="bg-light border-0" scope="col" style="text-align: center;"><div class="py-2 text-uppercase">Quantité</div></th>
+                                    <th class="bg-light border-0" scope="col" style="text-align: center;"><div class="py-2 text-uppercase">Etat</div></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for orderLine in commande.orderLines %}
+                                    <tr>
+                                        <td class="border-0" scope="row"><div class="p-2"><img src="{{orderLine.product.picture}}" alt="" width="100" class="img-fluid rounded shadow-sm"><div class="ml-3 d-inline-block align-middle"><h5 class="mb-0"><a href="#" class="text-dark d-inline-block align-middle ms-5">{{orderLine.product.name}} </a></h5><span class="text-muted font-weight-normal font-italic d-block ms-5">Catégorie : {{orderLine.product.category}}</span></div></div></td>
+                                        <td class="border-0 align-middle" style="font-weight: bold;text-align: center;"><strong>{{orderLine.product.price}}</strong>€</td>
+                                        <td class="border-0 align-middle" style="text-align: center;"><strong>{{orderLine.quantity}}</strong></td>
+                                        <td class="border-0 align-middle" style="text-align: center;"><strong>{{commande.Status}}</strong></td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                {% endfor %}
+                {% else %}
+                { #}
+                    <section class="py-4 py-xl-5">
+                        <div class="container">
+                            <div class="text-center p-4 p-lg-5">
+                                <p class="fw-bold text-primary mb-2">Il semble que vous n'ayez pas de commandes...</p>
+                                <h1 class="fw-bold mb-4">Biben dum fringi dictum,<br>augue purus</h1><button class="btn btn-primary fs-5 me-2 py-2 px-4" type="button">Button</button><button class="btn btn-light fs-5 py-2 px-4" type="button">Button</button>
+                            </div>
+                        </div>
+                    </section>
+                <section class="py-4 py-xl-5">
+                    <div class="container h-100">
+                        <div class="text-white bg-primary border rounded border-0 p-4 py-5">
+                            <div class="row h-100">
+                                <div class="col-md-10 col-xl-8 text-center d-flex d-sm-flex d-md-flex justify-content-center align-items-center mx-auto justify-content-md-start align-items-md-center justify-content-xl-center">
+                                    <div>
+                                        <h1 class="text-uppercase fw-bold text-white mb-3">Découvrez nos best-sellers !</h1>
+                                        <p class="mb-4">Des maillots, des crampons, des ballons et même des goodies ! Découvrez ce qui se vend le plus dans notre boutique !</p><button class="btn btn-light fs-5 py-2 px-4" type="button">Découvrir</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            {% endif %}
+        </div>
+    </section>
+{% endblock %}
