@@ -16,11 +16,15 @@ use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 class ProfileEditionController extends AbstractController
 {
     #[Route('/profile/edition', name: 'app_profile_edition')]
-    public function register(Request $request, UserPasswordHasherInterface $userPasswordHasher, EntityManagerInterface $entityManager, VerifyEmailHelperInterface $verifyEmailHelperInterface): Response
+    public function edition(Request $request, UserPasswordHasherInterface $userPasswordHasher, EntityManagerInterface $entityManager): Response
     {
         /** @var \App\Entity\User $user */
         $user = $this->getUser();
-        $form = $this->createForm(ProfileEditionFormType::class, $user);
+
+        $form = $this->createForm(ProfileEditionFormType::class, $user,[
+            'action' => $this->generateUrl('app_profile_edition'),
+            'method' => 'POST',
+        ]);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -32,14 +36,24 @@ class ProfileEditionController extends AbstractController
                 )
             );
 
-            return $this->redirectToRoute('app_security_login');
+            $entityManager->persist($user);
+            $entityManager->flush();
+
+            return $this->redirectToRoute('app_landing');
         }
 
+        if ($user->getFavTeam()!=null){
+            $picture = $user->getFavTeam()->getPicture();
+        }
+        else $picture = "https://i.goopics.net/feu9pb.jpg";
+
         return $this->render('profile_edition/profileEdition.html.twig', [
-            'registrationForm' => $form->createView(),
+            'editProfileForm' => $form->createView(),
+            'teamPicture' => $picture,
         ]);
     }
     
+
     public function index(): Response
     {
         return $this->render('profile_edition/ProfileEdition.html.twig', [
